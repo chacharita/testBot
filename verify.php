@@ -6,7 +6,7 @@ $url = 'https://api.line.me/v1/oauth/verify';
 
 $headers = array('Authorization: Bearer ' . $access_token);
 $proxy = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
-$proxyauth = '	tricycle';
+$proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
