@@ -8,6 +8,8 @@ $headers = array('Authorization: Bearer ' . $access_token);
 $proxy = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
 $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
 $ch = curl_init($url);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
