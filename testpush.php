@@ -7,9 +7,9 @@ $arrHeader = "Content-Type: application/json";
 $arrHeader = "Authorization: Bearer {$straccessToken}";
 
 $arrPostData = array();
-$arrPostData['to'] = "N0CMydroAdtFaxr2lbGMSNFRPYaoepxNuuhRfpxy2rj";
+$arrPostData['to'] = 'ch_rita';
 $arrPostData['messages'][0]['type'] = 'text';
-$arrPostData['messages'][0]['text'] = 'Hi peemmy';
+$arrPostData['messages'][0]['text'] = 'Hello Test PUSH';
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strurl);
@@ -24,7 +24,6 @@ $result = curl_exec($ch);
 curl_close ($ch);
 
 ?>
-
 
 
 
