@@ -5,4 +5,6 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '
 
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('sent');
 $response = $bot->pushMessage('ch_rita', $textMessageBuilder);
-echo $response->getHTTPStatus() . 'HiHi' . $response->getRawBody();
+echo $response->getHTTPStatus().' ' .response=>getRawBody();
+echo $response->getHTTPStatus().Hello.response->getRawBody();
+echo "oK Jaaa";
