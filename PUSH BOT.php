@@ -2,16 +2,16 @@
  
 $strAccessToken = "EOFJCU+NGmGZ4ca8OVjNKzz6WkNdqcrWKS2KK11Fx1g1Ti0BNdDPa019isWZHK47m31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDuZctrN5jBIO04MagDmuy0poH2Hd4aQXAO7TKs5UM/ofAdB04t89/1O/w1cDnyilFU=";
 //เข้ารหัสที่เป็นสตริง = strUrl
-$strUrl = "https://api.line.me/v2/bot/message/push";
+$strUrl = "https://api.line.me/v2/Bot/message/push";
  
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
 $arrPostData = array();
-$arrPostData['to'] = "ch.rita";
+$arrPostData['to'] = "ch_rita";
 $arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = "นี้คือการทดสอบ Push Message";
+$arrPostData['messages'][0]['text'] = "Test Push Message";
  
  
 $ch = curl_init();
