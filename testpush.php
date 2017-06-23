@@ -7,7 +7,7 @@ $arrHeader = "Content-Type: application/json";
 $arrHeader = "Authorization: Bearer {$straccessToken}";
 
 $arrPostData = array();
-$arrPostData['to'] = "U8e595fe987f94b2efd9db19c6039a1e1";
+$arrPostData['to'] = "N0CMydroAdtFaxr2lbGMSNFRPYaoepxNuuhRfpxy2rj";
 $arrPostData['messages'][0]['type'] = 'text';
 $arrPostData['messages'][0]['text'] = 'Hi peemmy';
 
