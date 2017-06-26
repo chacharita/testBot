@@ -13,16 +13,22 @@ $arrPostData['to'] = "U8e595fe987f94b2efd9db19c6039a1e1";
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "Test Push Message";
  
- 
+//curl_init() เพื่อเปิดการทำงาน
 $ch = curl_init();
+//CURLOPT_URL (url ของ api ที่เราต้องการไปเรียก) 
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
+//และ CURLOPT_POST (เซตให้เป็น true)
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
+//CURLOPT_POSTFIELDS (ข้อมูลที่เราต้องการจะส่งไป) และ CURLOPT_POST (เซตให้เป็น true)
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrPostData));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+//curl_exec ( resource $ch ) เพื่อสั่งให้ curl ทำงานคล้ายๆ การกดปุ่ม submit ใน form ที่ client
 $result = curl_exec($ch);
+//curl_close ( resource $ch ) สุดท้ายคือการสั่งปิดการทำงาน
 curl_close ($ch);
  
 
