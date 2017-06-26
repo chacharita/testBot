@@ -9,7 +9,7 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
 $arrPostData = array();
-$arrPostData['to'] = "SwGaL2ADu7";
+$arrPostData['to'] = "h5soGwspXIaskEGc5FPKAfvbWub3ay1OLfuwRygGGSc";
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "นี้คือการทดสอบ Push Message";
  
@@ -24,7 +24,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 
-if(curl_error($ch)) { echo 'error:' . curl_error($ch); } 
+if(curl_error($ch)) { echo 'error:'. curl_error($ch); } 
 else { $result_ = json_decode($result, true); 
 echo "status : ".$result_['status']; echo "message : ". $result_['message']; }
 
