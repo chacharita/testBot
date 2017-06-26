@@ -1,6 +1,6 @@
 <?php
  
-$strAccessToken = "EOFJCU+NGmGZ4ca8OVjNKzz6WkNdqcrWKS2KK11Fx1g1Ti0BNdDPa019isWZHK47m31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDuZctrN5jBIO04MagDmuy0poH2Hd4aQXAO7TKs5UM/ofAdB04t89/1O/w1cDnyilFU=";
+$strAccessToken = "QscSihNBPjAHy2fAVZ0SKQiHc5/C3/HQPtFx/KCsM6SdTXaE2PRunuzV1Xz/cJXLm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDsqZSCZc4bYV1Wk80CYLNIUNbz6+/Ors6gOS2kjzh6UPAdB04t89/1O/w1cDnyilFU=";
 //เข้ารหัสที่เป็นสตริง = strUrl
 $strUrl = "https://api.line.me/v2/bot/message/push";
  
