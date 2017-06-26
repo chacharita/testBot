@@ -5,7 +5,7 @@ $mids = array(0=>'U16c42e452723cf9c2682d7bf0001b0d8', 1=>'Uf9273c1fa1ec2ff4c3fb0
 foreach($mids as $key => $mid){        
         $messages = [
             "type" => "text",
-            "text" => 'test multiple user'
+            "text" => 'prove of concept'
         ];
  
         $post_data = [
