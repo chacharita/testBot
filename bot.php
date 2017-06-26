@@ -27,7 +27,6 @@ foreach($mids as $key => $mid){
  
         $result = curl_exec($ch);
         curl_close($ch);
-        return $result;
 }
 
  
