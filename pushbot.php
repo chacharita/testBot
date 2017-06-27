@@ -13,16 +13,16 @@ foreach($mids as $key => $mid){
          ];
        
        
-       $image =[
+//        $image =[
 
-               "type" =>"image",
-               "image" => $image
 //                "type" =>"image",
-//               "originalContentUrl"=> "https://example.com/original.jpg",
-//                "previewImageUrl"=> "https://example.com/preview.jpg"
+//                "image" => $image
+// //                "type" =>"image",
+// //               "originalContentUrl"=> "https://example.com/original.jpg",
+// //                "previewImageUrl"=> "https://example.com/preview.jpg"
        
        
-       ];
+//        ];
        
    
       $post_data = [
@@ -30,10 +30,10 @@ foreach($mids as $key => $mid){
             "messages" => [$messages]
         ];
         
-       $post_data = [
-            "to" => $mid,
-            "image" => [$image]
-        ];
+//        $post_data = [
+//             "to" => $mid,
+//             "image" => [$image]
+//         ];
    
  
         $header = array(
