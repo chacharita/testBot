@@ -10,7 +10,7 @@
     
      
     
-    <input type="text" name="inputtext" size="50" height="900" width="1200"><br>
+    <input type="text" name="inputtext" size="50" width="1200"><br>
                                                               
                                             
        <input type="submit" value="SUBMIT" >      
