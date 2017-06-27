@@ -2,7 +2,7 @@
        
 $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=";
 $text= $_POST['inputtext'];
-$mids = array(0=>'U7de80d0a2ceea863e831375badd2eb55','Ub5fea2ff169cba24b2179fd33e59e454');
+$mids = array(0=>'U7de80d0a2ceea863e831375badd2eb55','U8e595fe987f94b2efd9db19c6039a1e1');
 
 foreach($mids as $key => $mid){        
         $messages = [
