@@ -4,7 +4,7 @@ $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQG
 
 $mids = array(0=>'Uf9273c1fa1ec2ff4c3fb01f81d86556b'); 
 
-foreach($mids as $key => $mid){        
+//foreach($mids as $key => $mid){        
         $messages = [
             "type" => "text"
             "text" => 'Welcome To DX '
@@ -29,7 +29,7 @@ foreach($mids as $key => $mid){
  
         $result = curl_exec($ch);
         curl_close($ch);
-}
+//}
 
  
 ?>
