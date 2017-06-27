@@ -14,6 +14,7 @@ foreach($mids as $key => $mid){
             "to" => $mid,
             "messages" => [$messages]
         ];
+       
  
         $header = array(
             'Content-Type: application/json',
