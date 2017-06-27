@@ -8,9 +8,7 @@
     <form action="pushbot.php" method="POST">
      INPUT MESSAGE <br>
     
-     <TEXTAREA type="text" COLS="50" ROWS="5" name="inputtext"></TEXTAREA>
-</FORM>
-                                                              
+     <TEXTAREA type="text" COLS="50" ROWS="5" name="inputtext"></TEXTAREA>                                                      
        <input type="submit" value="SUBMIT" >      
     </form>
     </div>
