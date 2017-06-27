@@ -5,7 +5,7 @@ $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQG
 $mids = array(0=>'Uf9273c1fa1ec2ff4c3fb01f81d86556b'); 
 
 foreach($mids as $key => $mid){        
-        $messages = [
+        $messages = '[
             "type" => "text"
             "text" => 'Welcome To DX '
         ];
@@ -13,7 +13,7 @@ foreach($mids as $key => $mid){
         $post_data = [
             "to" => $mid,
             "messages" => [$messages]
-        ];
+        ]';
  
         $header = array(
             'Content-Type: application/json',
