@@ -6,45 +6,35 @@ $image = $_POST['inputimage'];
 $mids = array(0=>'U7de80d0a2ceea863e831375badd2eb55','U8e595fe987f94b2efd9db19c6039a1e1');
 
 foreach($mids as $key => $mid){        
-//         $messages = [
-//             "type" => "text",
-//             "text" => $text 
+        $messages = [
+            "type" => "text",
+            "text" => $text 
            
-//          ];
+         ];
        
        
        $image =[
 
-//                "type" =>"image",
-//                "image" => $image
                "type" =>"image",
-              "originalContentUrl"=> "https://example.com/original.jpg",
-               "previewImageUrl"=> "https://example.com/preview.jpg"
+               "image" => $image
+//                "type" =>"image",
+//               "originalContentUrl"=> "https://example.com/original.jpg",
+//                "previewImageUrl"=> "https://example.com/preview.jpg"
        
        
        ];
        
    
-//       $post_data = [
-//             "to" => $mid,
-//             "messages" => [$messages]
-//         ];
+      $post_data = [
+            "to" => $mid,
+            "messages" => [$messages]
+        ];
         
        $post_data = [
             "to" => $mid,
             "image" => [$image]
         ];
-       
-      
-            
-              
-               
-        
-      
-      
-       
-       
-       
+   
  
         $header = array(
             'Content-Type: application/json',
