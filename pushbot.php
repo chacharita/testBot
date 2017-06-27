@@ -6,9 +6,9 @@ $mids = array(0=>'U8e595fe987f94b2efd9db19c6039a1e1');
 
 foreach($mids as $key => $mid){        
         $messages = [
-//            "type" => "text",
-//             "text" => "chuppy" 
-               echo $_POST['inputtext'];
+            "type" => "text",
+            "text" => "chuppy" 
+             //  echo $_POST['inputtext'];
              
         ];
  
