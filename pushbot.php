@@ -11,16 +11,25 @@ foreach($mids as $key => $mid){
             "text" => $text 
            
          ];
-//        $image =[
+       $image =[
 //                "type" =>"image",
-//                "image" => $image
+//               "originalContentUrl"=>"https://example.com/original.jpg",
+//                "previewImageUrl"=>"https://example.com/preview.jpg"
+               "type" =>"image",
+               "image" => $image
        
        
-//        ]
+       ];
        
+   
+      
         $post_data = [
             "to" => $mid,
             "messages" => [$messages]
+        ];
+       $post_data = [
+            "to" => $mid,
+            "image" => [$image]
         ];
        
       
