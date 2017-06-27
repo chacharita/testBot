@@ -7,7 +7,7 @@
    
     <form action="pushbot.php" method="POST">
      INPUT MESSAGE <br>
-     <input type="text" name="inputtext" style="width:10px" style="row:50px" ><br>
+     <input type="text" name="inputtext" style="width:10px" style="row:50px"; ><br>
      
         
        
