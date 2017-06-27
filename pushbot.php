@@ -32,6 +32,7 @@ foreach($mids as $key => $mid){
         curl_close($ch);
        var_dump($mids);
        var_dump($post_data);
+       var_dump($header);
 }
 
 
