@@ -15,8 +15,11 @@ foreach($mids as $key => $mid){
        
        $image =[
 
+//                "type" =>"image",
+//                "image" => $image
                "type" =>"image",
-               "image" => $image
+              "originalContentUrl"=> "https://example.com/original.jpg",
+               "previewImageUrl"=> "https://example.com/preview.jpg"
        
        
        ];
