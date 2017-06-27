@@ -11,12 +11,12 @@ foreach($mids as $key => $mid){
             "text" => $text 
            
          ];
-       $image =[
-               "type" =>"image",
-               "image" => $image
+//        $image =[
+//                "type" =>"image",
+//                "image" => $image
        
        
-       ]
+//        ]
        
         $post_data = [
             "to" => $mid,
