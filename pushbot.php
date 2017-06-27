@@ -7,8 +7,8 @@ $mids = array(0=>'Uf9273c1fa1ec2ff4c3fb01f81d86556b');
 foreach($mids as $key => $mid){        
         $messages = [
            "type" => "text",
-            "text" => $_POST['text']; 
-             echo $_POST["input text"]."<br>"
+            "text" => "chuppy" 
+             
         ];
  
         $post_data = [
