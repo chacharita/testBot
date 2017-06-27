@@ -8,7 +8,7 @@ foreach($mids as $key => $mid){
         $messages = [
 //            "type" => "text",
 //             "text" => "chuppy" 
-               echo $_POST['input text'];
+               echo $_POST['inputtext'];
              
         ];
  
