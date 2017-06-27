@@ -31,6 +31,7 @@ foreach($mids as $key => $mid){
         $result = curl_exec($ch);
         curl_close($ch);
        var_dump($mids);
+       var_dump($message);
 }
 
 
