@@ -6,14 +6,14 @@ $mids = array(0=>'Uf9273c1fa1ec2ff4c3fb01f81d86556b');
 //$text = $_POST;
 foreach($mids as $key => $mid){        
         $messages = [
-           "type" => "text"  ,
+           "type" => "text",
             "text" => "Welcome To DX" 
         ];
  
         $post_data = [
             "to" => $mid,
             "messages" => [$messages]
-        ]';
+        ];
  
         $header = array(
             'Content-Type: application/json',
