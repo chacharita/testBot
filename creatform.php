@@ -7,7 +7,8 @@
    
     <form action="pushbot.php" method="POST">
      INPUT MESSAGE <br>
-     <input type="text" name="inputtext" size="50"><br>
+     <input type="text" name="inputtext" size=50><br>
+     <textarea name="ชื่อ" cols="ความกว้าง" rows="ความสูง"></textarea>
        
                                                     
        <input type="submit" value="SUBMIT" >      
