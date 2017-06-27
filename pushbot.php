@@ -5,8 +5,8 @@ $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQG
 $mids = array(0=>'Uf9273c1fa1ec2ff4c3fb01f81d86556b'); 
 $text = $_POST;
 foreach($mids as $key => $mid){        
-        $messages = '[
-            "type" => "text"
+        $messages = [
+            "type" => "text",
             "text" => $text;
         ];
  
