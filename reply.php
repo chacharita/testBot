@@ -11,6 +11,8 @@ $strUrl = "https://api.line.me/v2/bot/message/reply";
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+$arrPostData['messages'][0]['type'] = "text";
+ $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
  //var_dump($arrHeader);
 if($arrJson['events'][0]['message']['text'] == "Hi" or "hi"){
   $arrPostData = array();
