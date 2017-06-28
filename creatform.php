@@ -8,7 +8,7 @@
     <form action="pushbot.php" method="POST">
      INPUT MESSAGE 
             
-    <input type="text" name="inputtext" size="50" width="1200"><br>
+    <input type="text" :center ; name="inputtext" size="50" width="1200"><br>
         
                                        
        
