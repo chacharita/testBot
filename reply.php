@@ -3,25 +3,25 @@
 $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=";
  
 $content = file_get_contents('php://input');
-var_dump($content);
+//var_dump($content);
 $arrJson = json_decode($content, true);
 
 $strUrl = "https://api.line.me/v2/bot/message/reply";
-var_dump($strUrl); 
+//var_dump($strUrl); 
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
- var_dump($arrHeader);
+ //var_dump($arrHeader);
 if($arrJson['events'][0]['message']['text'] == "Hi" or "hi"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
- var_dump($arrPostData);
+ //var_dump($arrPostData);
   $arrPostData['messages'][0]['type'] = "text";
- $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source'];
- var_dump($arrPostData);
+ $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['UserID']."<br/>".$arrJson['events'][0];
+ //var_dump($arrPostData);
  
 }
- var_dump($arrJson);
+// var_dump($arrJson);
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
