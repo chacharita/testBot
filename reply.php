@@ -4,8 +4,8 @@ $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQG
  
 $content = file_get_contents('php://input');
 $user_id = $arrJson['events'][0]['source']['userId'];
-//$dtb =mysql_connect();
-//$insert into  line_member(mid) value("$mid");
+$dtb =mysql_connect($hoot,$mids,$db) or die("ติดต่อฐานข้อมูลไม่ได้");
+$dtb = insert into  line_member(mid) value("$mid");
 $arrJson = json_decode($content, true);
 //$user_id = $arrJson['events'][0]['source']['userId'];mysql_connect();
 //$insert into  line_member(mid) value("$mid");
