@@ -5,7 +5,7 @@ $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQG
 $content = file_get_contents('php://input');
 //var_dump($content);
 $arrJson = json_decode($content, true);
-$user_id = $arrJson['events'][0]['source']['userId'];mysql_connect();
+//$user_id = $arrJson['events'][0]['source']['userId'];mysql_connect();
 //$insert into  line_member(mid) value("$mid");
 $strUrl = "https://api.line.me/v2/bot/message/reply";
 //var_dump($strUrl); 
