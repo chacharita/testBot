@@ -16,8 +16,8 @@
          <input type="text" class="form-control" id="inputimage" name="inputimage" placeholder="Photo URL" size="60"><br>
         <SELECT> 
          <OPTION SELECTED>---เลือกMember---
-         <OPTION VALUE=1>ffon 
-         <OPTION VALUE=2>ชื่อตัวแปร 2
+         <OPTION VALUE=U7de80d0a2ceea863e831375badd2eb55>ffon 
+         <OPTION VALUE=U8e595fe987f94b2efd9db19c6039a1e1>OIL
          </SELECT>
          <input type="submit" value="SUBMIT" > 
     </form>
