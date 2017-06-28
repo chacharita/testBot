@@ -9,6 +9,12 @@
      INPUT MESSAGE 
             
     <input type="text" name="inputtext" size="50" width="1200"><br>
+        
+          <SELECT> 
+         <OPTION SELECTED>---เลือกข้อความ---
+         <OPTION VALUE=1>ชื่อตัวแปร1 
+         <OPTION VALUE=2>ชื่อตัวแปร 2
+         </SELECT>
                               
        
         <label for="inputimage" class="col-lg-2 control-label">Photo URL</label>
