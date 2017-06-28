@@ -3,34 +3,28 @@
 $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=";
  
 $content = file_get_contents('php://input');
-//var_dump($content);
+
 $arrJson = json_decode($content, true);
 //$user_id = $arrJson['events'][0]['source']['userId'];mysql_connect();
 //$insert into  line_member(mid) value("$mid");
 $strUrl = "https://api.line.me/v2/bot/message/reply";
-//var_dump($strUrl); 
+
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
 
- //var_dump($arrHeader);
- if($arrJson['events']){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events']['replyToken'];
-  $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Hello new friend".$arrJson['events'];
-  
-//   $arrPostData = array();
-//   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-// //  //var_dump($arrPostData);
-// $arrPostData['messages'][0]['type'] = "text";
-// $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
-//  //var_dump($arrPostData);
  
+ if($arrJson['events'][0]){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "Hello new friend".$arrJson['events'][0];
+  
+
  }
-// var_dump($arrJson);
+
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
