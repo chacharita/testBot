@@ -16,9 +16,9 @@ if($arrJson['events'][0]['message']['text'] == "Hi" or "hi"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
  var_dump($arrPostData);
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
+  $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source'];
  var_dump($arrPostData);
- 
+// $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
 }
  
  
