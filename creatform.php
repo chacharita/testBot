@@ -15,8 +15,8 @@
         <label for="inputimage" class="col-lg-2 control-label">Photo URL</label>
          <input type="text" class="form-control" id="inputimage" name="inputimage" placeholder="Photo URL" size="60"><br>
         <SELECT> 
-         <OPTION SELECTED>---เลือกข้อความ---
-         <OPTION VALUE=1>ชื่อตัวแปร1 
+         <OPTION SELECTED>---เลือกMember---
+         <OPTION VALUE=1>ffon 
          <OPTION VALUE=2>ชื่อตัวแปร 2
          </SELECT>
          <input type="submit" value="SUBMIT" > 
