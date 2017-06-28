@@ -14,17 +14,19 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
-echo "hello";
+
  //var_dump($arrHeader);
-// if($arrJson['events'][0]['message']['text'] == "Hi" or "hi"){
+ if($arrJson['events'][0]['message']['text']){
+  echo "hello";
+  
 //   $arrPostData = array();
 //   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+// //  //var_dump($arrPostData);
+// $arrPostData['messages'][0]['type'] = "text";
+// $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
 //  //var_dump($arrPostData);
-//   $arrPostData['messages'][0]['type'] = "text";
-//  $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
- //var_dump($arrPostData);
  
-}
+// }
 // var_dump($arrJson);
  
 $ch = curl_init();
