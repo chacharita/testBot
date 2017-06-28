@@ -27,7 +27,7 @@ $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source
 // $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
 //  //var_dump($arrPostData);
  
-// }
+ }
 // var_dump($arrJson);
  
 $ch = curl_init();
