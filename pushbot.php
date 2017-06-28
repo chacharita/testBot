@@ -16,19 +16,13 @@ foreach($messages as $mid =>$mids){
             "text" => $text 
            
          ];
-      
-       
-      
-       
-   
+    
       $post_data = [
             "to" => $mid,
             "messages" => [$messages]
         ];
         
-      
    
- 
         $header = array(
             'Content-Type: application/json',
             'Authorization: Bearer ' . $strAccessToken
