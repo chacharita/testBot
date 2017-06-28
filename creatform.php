@@ -10,15 +10,15 @@
             
     <input type="text" name="inputtext" size="50" width="1200"><br>
         
-          <SELECT> 
+                                       
+       
+        <label for="inputimage" class="col-lg-2 control-label">Photo URL</label>
+         <input type="text" class="form-control" id="inputimage" name="inputimage" placeholder="Photo URL" size="60"><br>
+        <SELECT> 
          <OPTION SELECTED>---เลือกข้อความ---
          <OPTION VALUE=1>ชื่อตัวแปร1 
          <OPTION VALUE=2>ชื่อตัวแปร 2
          </SELECT>
-                              
-       
-        <label for="inputimage" class="col-lg-2 control-label">Photo URL</label>
-         <input type="text" class="form-control" id="inputimage" name="inputimage" placeholder="Photo URL" size="60"><br>
          <input type="submit" value="SUBMIT" > 
     </form>
     </div>
