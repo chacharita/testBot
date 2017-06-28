@@ -20,7 +20,7 @@ $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events']['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Hello new friend";
+  $arrPostData['messages'][0]['text'] = "Hello new friend".$arrJson['events'];
   
 //   $arrPostData = array();
 //   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
