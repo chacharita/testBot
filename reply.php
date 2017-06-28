@@ -5,21 +5,23 @@ $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQG
 $content = file_get_contents('php://input');
 //var_dump($content);
 $arrJson = json_decode($content, true);
-
+$user_id = $arrJson['events'][0]['source']['userId'];mysql_connect();
+//$insert into  line_member(mid) value("$mid");
 $strUrl = "https://api.line.me/v2/bot/message/reply";
 //var_dump($strUrl); 
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $arrPostData['messages'][0]['type'] = "text";
- $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
+$arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
+echo "hello";
  //var_dump($arrHeader);
-if($arrJson['events'][0]['message']['text'] == "Hi" or "hi"){
-  $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
- //var_dump($arrPostData);
-  $arrPostData['messages'][0]['type'] = "text";
- $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
+// if($arrJson['events'][0]['message']['text'] == "Hi" or "hi"){
+//   $arrPostData = array();
+//   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+//  //var_dump($arrPostData);
+//   $arrPostData['messages'][0]['type'] = "text";
+//  $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
  //var_dump($arrPostData);
  
 }
