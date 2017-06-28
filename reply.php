@@ -17,7 +17,8 @@ $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source
 
  //var_dump($arrHeader);
  if($arrJson['events'][0]['message']['text']){
-  echo "hello";
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "Hello new friend";
   
 //   $arrPostData = array();
 //   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
