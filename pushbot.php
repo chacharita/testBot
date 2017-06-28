@@ -8,7 +8,7 @@ $text= $_POST['inputtext'];
 //$mids = array(0=>'U7de80d0a2ceea863e831375badd2eb55','U8e595fe987f94b2efd9db19c6039a1e1','U16c42e452723cf9c2682d7bf0001b0d8');
 
 //var_dump($mids);
-foreach($messages as $mid =>$mids){
+//foreach($messages as $mid =>$mids){
        
        foreach($mids as $key => $mid){        
         $messages = [
@@ -44,7 +44,7 @@ foreach($messages as $mid =>$mids){
         $result = curl_exec($ch);
         curl_close($ch);
        
-}
+//}
 }
 
 
