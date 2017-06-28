@@ -16,11 +16,11 @@ $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
 
  //var_dump($arrHeader);
- if($arrJson['events'][0]){
+ if($arrJson['events']){
   $arrPostData = array();
-  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['replyToken'] = $arrJson['events']['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Hello new friend".$arrJson['events'][0];
+  $arrPostData['messages'][0]['text'] = "Hello new friend";
   
 //   $arrPostData = array();
 //   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
