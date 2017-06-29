@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="th">
- 55
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -115,10 +114,10 @@
 
 
     // *** Params ***
-    $messages = array(
+    $messages = [
             "type" => "text",
             "text" => $text 
-         );
+         ];
          
     $header = array(
             'Content-Type: application/json',
@@ -134,11 +133,14 @@
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
- 
+        try{
         $result = curl_exec($ch);
+        }catch($ex)
+        {
+          print "<br>---------<br>";
+          var_dump($result);   
+        }
         
-        print "<br>---------<br>";
-        var_dump($result);
         curl_close($ch);
     }
     
@@ -147,11 +149,11 @@
     $i =1;          
     foreach($midUser as $key => $mid)
     {        
-        print $i++ . ":send";
-        $post_data = array(
+        print $i++ . ":sended <br>";
+        $post_data = [
             "to"        => $mid,
-            "messages"  => $messages
-        );
+            "messages"  => [$messages]
+        ];
       
         send_line_msg($post_data,$header);
     }
