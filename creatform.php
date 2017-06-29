@@ -4,7 +4,7 @@
     <div>
     
     <h1 style="text-align:left;background-color: #99FFFF">LINE@PUSH_MESSAGE</h1>
-   
+   <center>
     <form action="pushbot.php" method="POST">
     <SELECT>
          <OPTION SELECTED>---เลือกMember---
@@ -12,7 +12,7 @@
          <OPTION VALUE=U8e595fe987f94b2efd9db19c6039a1e1>OIL
          <OPTION VALUE=U16c42e452723cf9c2682d7bf0001b0d8>P'eam  
       </SELECT>
-             
+        <br>     
         INPUT MESSAGE <input type="text" :center ; name="inputtext" size="50" width="1200"><br>
         
         <label for="inputimage" class="col-lg-2 control-label">Photo URL</label>
