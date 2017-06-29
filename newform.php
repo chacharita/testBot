@@ -42,15 +42,15 @@
             </div><form>
 
             
-            <div class="col-md-8 col-md-offset-2">
+            <div >
                 <form method="post">
                     <div class="form-group">
                         <label>Text</label>
-                        <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
+                        <textarea rows="8" id="textArea" name="textArea"></textarea>
                     </div>
                     <!--buttonMember-->
-                    <div class="form-group" align="center">
-                        <button type="button"  data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
+                    <div>
+                        <button type="radio"  data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
                         MEMBER
                         </button>
                     </div>
@@ -60,7 +60,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Member</h4>
                 </div>
                 <div class="container">
@@ -73,8 +73,8 @@
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" name="submit">Summit</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit"  name="submit">Summit</button>
+                    <button type="radio" >Close</button>
                 </div>
             </div>
         </div>
@@ -83,8 +83,8 @@
 
                     <!--submitCancel-->
                     <div class="button-sc text-center">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="cancel" class="btn btn-default" style="margin-right:10px;">Cancel</button>
+                        <button type="submit">Submit</button>
+                        <button type="cancel">Cancel</button>
                     </div>
                 </form>
             </div>
