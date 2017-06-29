@@ -103,7 +103,7 @@
 <?php
 $proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
 $proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80'; 
-$strAccessToken = 'QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=';            
+$strAccessToken = 'xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=';            
 $text = $_POST['textArea'];
 $midUser = $_POST['mid'];  
 $tokenLine = $_POST['tokenLine'];
@@ -111,7 +111,9 @@ $tokenLine = $_POST['tokenLine'];
 $strAccessToken1 = $tokenLine;
 var_dump($strAccessToken1) ;
 //$mids = array($midUser); 
-foreach($midUser as $key => $mid){     
+foreach($tokenLine as $key => $mid){
+  
+  foreach($midUser as $key => $mid){     
         
         $messages = [
             "type" => "text",
@@ -139,6 +141,7 @@ foreach($midUser as $key => $mid){
         curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         $result = curl_exec($ch);
         curl_close($ch);
+}
 }
  
  ?>
