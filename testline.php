@@ -140,9 +140,11 @@
     }
     
             
-    //  Loop Send Line msg          
+    //  Loop Send Line msg
+    $i =1;          
     foreach($midUser as $key => $mid)
     {        
+        print $i++ . ":send";
         $post_data = array(
             "to"        => $mid,
             "messages"  => $messages
