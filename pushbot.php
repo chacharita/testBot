@@ -1,29 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div>
+    <center>
+    <h1 style="text-align>PUSH_MESSAGE</h1>
+   <center>
+    <form action="pushbot.php" method="POST">
+    <SELECT>
+         <OPTION name="[name]">--- เลือก Member ---
+         <OPTION VALUE=U7de80d0a2ceea863e831375badd2eb55>ffon 
+         <OPTION VALUE=U8e595fe987f94b2efd9db19c6039a1e1>OIL
+         <OPTION VALUE=U16c42e452723cf9c2682d7bf0001b0d8>P'eam  
+      </SELECT>
+        <br>     
+        INPUT MESSAGE <input type="text" :center ; name="inputtext" size="50" width="1200"><br>
+        
+        <label for="inputimage" class="col-lg-2 control-label">Photo URL</label>
+         <input type="text" class="form-control" id="inputimage" name="inputimage" placeholder="Photo URL" size="60"><br>
+        
+         <input type="submit" value="SUBMIT" > 
+    </form>
+    </div>
+</body>
+</html>
+
 <?php
        
 $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=";
-//var_dump($strAccessToken);
+
 $text= $_POST['inputtext'];
 $user = $_POST['name'];
-//$image = $_POST['inputimage'];
-$mids = array(0=>'Ub5fea2ff169cba24b2179fd33e59e454');
 
-//var_dump($mids);
-//foreach($messages as $mid =>$mids){
-       
+$mids = array($user);
+
        foreach($mids as $key => $mid){        
         $messages = [
             "type" => "text",
             "text" => $text 
-            
-           
+         
          ];
     
       $post_data = [
             "to" => $mid,
             "messages" => [$messages]
         ];
-        
-   
+      
         $header = array(
             'Content-Type: application/json',
             'Authorization: Bearer ' . $strAccessToken
@@ -39,7 +60,7 @@ $mids = array(0=>'Ub5fea2ff169cba24b2179fd33e59e454');
         $result = curl_exec($ch);
         curl_close($ch);
        
-//}
+
 }
 
 
