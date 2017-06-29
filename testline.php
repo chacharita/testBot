@@ -136,6 +136,9 @@
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
  
         $result = curl_exec($ch);
+        
+        print "<br>---------<br>";
+        var_dump();
         curl_close($ch);
     }
     
