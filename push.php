@@ -5,7 +5,7 @@ $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQG
 $text= $_POST['text'];
 $VALUE = $_POST['name'];
 //$image = $_POST['inputimage'];
-//$mids = array(0=>'U7de80d0a2ceea863e831375badd2eb55','U8e595fe987f94b2efd9db19c6039a1e1','U16c42e452723cf9c2682d7bf0001b0d8');
+$mids = array(0=>'U8e595fe987f94b2efd9db19c6039a1e1');
 
 //var_dump($mids);
 //foreach($messages as $mid =>$mids){
