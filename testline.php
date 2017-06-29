@@ -93,36 +93,41 @@
 
 
 <?php
-$proxy = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
-$proxyauth = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80'; 
-//$strAccessToken = 'QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=';            
-$text = $_POST['textArea'];
-$midUser = $_POST['mid'];  
-$strAccessToken = $_POST['tokenLine'];
-    echo("this is toke : \n");
-var_dump($strAccessToken) ;
-    echo("this is mid : \n");
-var_dump($midUser) ;
-    echo("this is text : \n");
-var_dump($text) ;
+    // *** Configuration ***
+    $proxy      = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
+    $proxyauth  = 'http://fixie:f15Ug5dvUX8MX7F@velodrome.usefixie.com:80';
+    
+     
+    //$strAccessToken = 'QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=';            
 
-    foreach($midUser as $key => $mid){        
-        $messages = [
+    //  *** Input ***
+    $text           = $_POST['textArea'];
+    $midUser        = $_POST['mid'];  
+    $strAccessToken = $_POST['tokenLine'];
+    
+    // *** Display Data ***
+    echo("this is toke : $strAccessToken \n");
+    //var_dump($strAccessToken) ;
+    echo("this is mid : $midUser \n");
+    //var_dump($midUser) ;
+    echo("this is text : $text \n");
+    //var_dump($text) ;
+
+
+    // *** Params ***
+    $messages = array(
             "type" => "text",
             "text" => $text 
+         );
          
-         ];
-    
-      $post_data = [
-            "to" => $mid,
-            "messages" => [$messages]
-        ];
-      
-        $header = array(
+    $header = array(
             'Content-Type: application/json',
             'Authorization: Bearer ' . $strAccessToken
-        );
+            );   
+    
+    function send_line_msg($post_data,$header){
         $url = 'https://api.line.me/v2/bot/message/push';
+        
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
@@ -132,7 +137,19 @@ var_dump($text) ;
  
         $result = curl_exec($ch);
         curl_close($ch);
- 
+    }
+    
+            
+    //  Loop Send Line msg          
+    foreach($midUser as $key => $mid)
+    {        
+        $post_data = array(
+            "to"        => $mid,
+            "messages"  => $messages
+        );
+      
+        send_line_msg($post_data,$header);
+    }
  
  ?>
 </body>
