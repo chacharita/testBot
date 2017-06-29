@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+ 55
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -114,10 +115,10 @@
 
 
     // *** Params ***
-    $messages = [
+    $messages = array(
             "type" => "text",
             "text" => $text 
-         ];
+         );
          
     $header = array(
             'Content-Type: application/json',
@@ -128,19 +129,20 @@
         $url = 'https://api.line.me/v2/bot/message/push';
         
         $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        $result ="";
         try{
-        $result = curl_exec($ch);
-        }catch($ex)
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+     
+            $result = curl_exec($ch);
+        }catch(exception $e)
         {
-          print "<br>---------<br>";
-          var_dump($result);   
+            print "<br>---------<br>";
+            var_dump($result);
         }
-        
         curl_close($ch);
     }
     
@@ -149,11 +151,11 @@
     $i =1;          
     foreach($midUser as $key => $mid)
     {        
-        print $i++ . ":sended <br>";
-        $post_data = [
+        print $i++ . ":send";
+        $post_data = array(
             "to"        => $mid,
-            "messages"  => [$messages]
-        ];
+            "messages"  => $messages
+        );
       
         send_line_msg($post_data,$header);
     }
