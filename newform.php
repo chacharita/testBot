@@ -31,36 +31,34 @@
 
 
     <div class="container">
-       
         <div class="row">
-            <div>
+            <div class="col-xs-12 head-form">
                 <h1 align = "center">Push Massages</h1>
             </div>
             <form method="post"><div class="form-group" align="center">
-           <button type="radio"  value="QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=" name="tokenLine[0]"> Line@ffon</button>
+           <button type="radio" value="QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=" name="tokenLine[0]"> Line@ffon</button>
            <button type="radio"  value="xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=" name="tokenLine[1]"> Line@oil</button>
             </div><form>
 
-            
-            <div >
+            <div class="col-md-8 col-md-offset-2">
                 <form method="post">
                     <div class="form-group">
                         <label>Text</label>
-                        <textarea rows="8" id="textArea" name="textArea"></textarea>
+                        <textarea  rows="8" id="textArea" name="textArea"></textarea>
                     </div>
                     <!--buttonMember-->
-                    <div>
-                        <button type="radio"  data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
+                    <div class="form-group" align="center">
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
                         MEMBER
                         </button>
                     </div>
                     <!--Modal-->
-    <div>
-          <form method="post">
-        <div>
-            <div>
-                <div>
-                    <button type="radio" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <form method="post">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                         <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Member</h4>
                 </div>
                 <div class="container">
@@ -73,8 +71,8 @@
                         </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit"  name="submit">Summit</button>
-                    <button type="radio" >Close</button>
+                    <button type="submit" class="btn btn-primary" name="submit">Summit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -83,8 +81,8 @@
 
                     <!--submitCancel-->
                     <div class="button-sc text-center">
-                        <button type="submit">Submit</button>
-                        <button type="cancel">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="cancel" class="btn btn-default" style="margin-right:10px;">Cancel</button>
                     </div>
                 </form>
             </div>
