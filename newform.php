@@ -111,7 +111,7 @@ $tokenLine = $_POST['tokenLine'];
 $strAccessToken1 = $tokenLine;
 var_dump($strAccessToken1) ;
 //$mids = array($midUser); 
-foreach($tokenLine as $key => $mid){
+foreach($tokenLine as $midUser)){
   
   foreach($midUser as $key => $mid){     
         
