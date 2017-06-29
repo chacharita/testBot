@@ -36,8 +36,8 @@
                 <h1 align = "center">Push Massages</h1>
             </div>
             <form action="/action_page.php" method="get">
-        <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
-        <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
+        <input type="checkbox" name="token" value="xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU="><br>
+<!--         <input type="checkbox" name="token" value="<br> -->
         <input type="submit" value="Submit">
         </form>
 
