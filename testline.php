@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-
+ 55
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -138,7 +138,7 @@
         $result = curl_exec($ch);
         
         print "<br>---------<br>";
-        var_dump();
+        var_dump($result);
         curl_close($ch);
     }
     
