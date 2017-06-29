@@ -3,7 +3,7 @@
 <body>
     <div>
     <center>
-    <h1 style="text-align>LINE@PUSH_MESSAGE</h1>
+    <h1 style="text-align>PUSH_MESSAGE</h1>
    <center>
     <form action="pushbot.php" method="POST">
     <SELECT>
