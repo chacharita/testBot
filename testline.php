@@ -138,6 +138,11 @@
             curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
      
             $result = curl_exec($ch);
+            if($result['http_code'] != 200)
+            {
+               print "<br>---------<br>";
+               var_dump($result); 
+            }
         }catch(exception $e)
         {
             print "<br>---------<br>";
