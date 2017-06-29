@@ -33,7 +33,7 @@
     <div class="container">
        
         <div class="row">
-            <div class="col-xs-12 head-form">
+            <div>
                 <h1 align = "center">Push Massages</h1>
             </div>
             <form method="post"><div class="form-group" align="center">
@@ -55,12 +55,12 @@
                         </button>
                     </div>
                     <!--Modal-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div>
           <form method="post">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div>
+            <div>
+                <div>
+                    <button type="radio" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Member</h4>
                 </div>
                 <div class="container">
