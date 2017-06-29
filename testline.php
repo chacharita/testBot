@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
- 56
+ 57
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -159,7 +159,7 @@
         print $i++ . ":send";
         $post_data = array(
             "to"        => $mid,
-            "messages"  => $messages
+            "messages"  => [$messages]
         );
       
         send_line_msg($post_data,$header);
