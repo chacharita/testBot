@@ -3,7 +3,7 @@
     <div>
     <center>
    <h1 style="text-align:center;">PUSH MESSAGE</h1>
-    <form action="pushbot.php" method="POST" >  
+    <form action="push.php" method="POST" >  
       <br><br>
       <TEXTAREA  name="txet"rows="10" cols="80"> </TEXTAREA>                                             
          <br><br><br>
