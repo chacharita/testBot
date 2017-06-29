@@ -15,8 +15,6 @@
         <br>     
         INPUT MESSAGE <input type="text" :center ; name="inputtext" size="50" width="1200"><br>
         
-       
-        
          <input type="submit" value="SUBMIT" > 
     </form>
     </div>
