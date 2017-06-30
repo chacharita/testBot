@@ -65,8 +65,8 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary" name="submit">Summit</button>
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <input type="submit" class="btn btn-primary" name="submit">Summit</input>
+                                        <input type="button" class="btn btn-default" data-dismiss="modal">Close</input>
                                     </div>
                                 </div>
                             </div>
