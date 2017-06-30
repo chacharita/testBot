@@ -1,33 +1,39 @@
 <?php
- 
+ 
 $strAccessToken = "xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=";
- 
+ 
 $content = file_get_contents('php://input');
-//$user_id = $arrJson['events'][0]['source']['userId'];
-//$dtb =mysql_connect($hoot,$mids,$db) or die("ติดต่อฐานข้อมูลไม่ได้");
-//$dtb = insert into  line_member(mid) value("$mid");
 $arrJson = json_decode($content, true);
-//$user_id = $arrJson['events'][0]['source']['userId'];mysql_connect();
-//$insert into  line_member(mid) value("$mid");
+ 
 $strUrl = "https://api.line.me/v2/bot/message/reply";
-
+ 
 $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
-$arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
-var_dump($$arrHeader);
- 
- if($arrJson['events'][0]){
+ 
+if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "Hello new friend".$arrJson['events'][0];
-  
-
- }
-
- 
+  $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
+}else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
+}else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ฉันทำอะไรไม่ได้เลย คุณต้องสอนฉันอีกเยอะ";
+}else{
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
+}
+ 
+ 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
 curl_setopt($ch, CURLOPT_HEADER, false);
@@ -38,5 +44,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
- 
+echo "OK55";
+ 
 ?>
