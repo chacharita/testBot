@@ -16,7 +16,7 @@ $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $arrPostData['messages'][0]['type'] = "text";
 $arrPostData['messages'][0]['text'] = "UserID :: ".$arrJson['events'][0]['source']['userId'];
-
+var_dump($$arrHeader);
  
  if($arrJson['events'][0]){
   $arrPostData = array();
