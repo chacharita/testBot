@@ -105,54 +105,7 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
     $midUser        = $_POST['mid'];  
     $strAccessToken = $_POST['tokenLine'];
    
-    // *** Display Data ***
-   // echo("this is toke : $strAccessToken \n");
-    //var_dump($strAccessToken) ;
-    echo("this is mid : $midUser \n");
-    //var_dump($midUser) ;
-    //echo("this is text : $text \n");
-    //var_dump($text) ;
-
-
-    // *** Params ***
-    $messages = array(
-            "type" => "text",
-            "text" => $text 
-         );
-         
-    $header = array(
-            'Content-Type: application/json',
-            'Authorization: Bearer ' . $strAccessToken
-            );   
-    
-    function send_line_msg($post_data,$header){
-        $url = 'https://api.line.me/v2/bot/message/push';
-        
-        $ch = curl_init($url);
-        $result ="";
-        try{
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-     
-            $result = curl_exec($ch);
-            if($result['http_code'] != 200)
-            {
-               print "<br>---------<br>";
-               var_dump($result); 
-            }
-        }catch(exception $e)
-        {
-            print "<br>---------<br>";
-            var_dump($result);
-        }
-        curl_close($ch);
-    }
-    
-            
-    //  Loop Send Line msg
+     //  Loop Send Line msg
     $i =1;          
     foreach($midUser as $key => $mid)
     {        
@@ -164,6 +117,62 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
       
         send_line_msg($post_data,$header);
     }
+
+
+    // *** Params ***
+    $messages = array(
+            "type" => "text",
+            "text" => $text 
+         );
+         
+    
+    
+    function send_line_msg($post_data,$header){
+        $header = array(
+            'Content-Type: application/json',
+            'Authorization: Bearer ' . $strAccessToken
+            );
+     
+      $url = 'https://api.line.me/v2/bot/message/push'
+           ;
+        
+        $ch = curl_init($url);
+        $result ="";
+        try{
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+     
+            $result = curl_exec($ch);
+         
+            
+            if($result['http_code'] == 200)
+            {
+              echo "ส่งข้อมูลเรียบร้อย";
+              echo "<a href='showmessage.php'>ดูข้อมูล</a>";
+              $file = fopen("pushmessage.txt","a+") or die("Unleble open file"); 
+             
+              $write = fwrite($file,$post_data);
+              fclose($file);
+            }
+            else
+            {
+           $file = fopen("pushmessage.txt","a+") or die("Unable open file");
+           $wfile = fwrite($file,$post_data);
+           fclose($file);
+           }
+     }catch(exception $e)
+        {
+           echo  "Error (File : ".$e->getFile()." line : ".$e->getLine()."): ".$e->getMessage();
+        }
+        curl_close($ch);
+    }
+    }
+    
+            
+   
  
  ?>
 </body>
