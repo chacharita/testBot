@@ -24,7 +24,7 @@
             curl_setopt($ch, CURLOPT_GET, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS,($post_data));
+            curl_setopt($ch, CURLOPT_GETFIELDS,($post_data));
             curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
             $result = curl_exec($ch);
             curl_close($ch);
