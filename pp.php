@@ -9,7 +9,7 @@
         $st_x= '08:00:00',     
         $en_y= '17:00:00' ,      
         $en_x= '17:00:00'  ,    
-        $toll= '0 or 1'
+        $toll= '[0 or 1]'
     ; 
        
     
@@ -30,7 +30,7 @@
             curl_close($ch);
        
    
-    echo response;
+    echo "response";
 
 
 ?>
