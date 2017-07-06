@@ -31,7 +31,7 @@
        
    
     echo "response";
-   var_dump($result);
+    var_dump($result);
 
 
 ?>
