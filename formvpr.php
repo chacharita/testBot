@@ -5,7 +5,7 @@
     
    <h1>REGISTER</h1>
    
-    <form method="GET"> 
+    <form action="pp.php" method="GET"> 
 
       Date:<input type="text" name="date_time"><br>  
       st_y: <input type="text" name="st_y"><br>
