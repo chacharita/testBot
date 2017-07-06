@@ -9,7 +9,7 @@
         $st_x= '08:00:00',     
         $en_y= '17:00:00' ,      
         $en_x= '17:00:00'  ,    
-        $toll= '[0 or 1]'
+        $toll= '0 or 1'
     ; 
        
     
@@ -24,7 +24,7 @@
             curl_setopt($ch, CURLOPT_GET, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_GETFIELDS,($post_data));
+            curl_setopt($ch, CURLOPT_POSTFIELDS,($post_data));
             curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
             $result = curl_exec($ch);
             curl_close($ch);
