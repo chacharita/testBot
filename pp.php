@@ -25,12 +25,7 @@
 $url = "https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/odRouting";     
 $strAccessToken = "31cc9ed0-50f1-3b99-b4d1-8aca20de6213";
 
-   $datetime = $_POST['Datetime'];
-   $st_y = $_POST['st_y'];
-   $st_x = $_POST['st_x'];
-   $en_x = $_POST['en_y'];
-   $en_x = $_POST['en_x'];
-   $toll = $_POST['toll'];
+   
  
    $post_data =array(  
         $date_time='yyyy-mm-dd' ,
