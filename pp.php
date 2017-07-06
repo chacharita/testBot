@@ -4,7 +4,7 @@
     <div>
     
    <h1>REGISTER</h1>
-   <center>
+   
     <form method="POST"> 
 
       Date:<input type="text" name="Date_time"><br>  
