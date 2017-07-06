@@ -12,12 +12,14 @@
       st_x : <input type="text" name="st_x"><br>
       en_y: <input type="text" name="en_y"><br>  
       en_x: <input type="text" name="en_x"><br> 
-      toll: <input type="text" name="toll"><br>    
-      <input type="submit" value="submit" >         
+      toll: <input type="text" name="toll"><br><br>    
+      <input type="submit" value="submit">         
     </form>
     </div>
 </body>
 </html>
+
+
 <?php
    
 $url = "https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/odRouting";     
