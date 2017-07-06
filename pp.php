@@ -30,7 +30,8 @@
             curl_close($ch);
        
    
-    echo response;
+    echo "response";
+   var_dump($result);
 
 
 ?>
