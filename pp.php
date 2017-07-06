@@ -5,7 +5,7 @@
     
    <h1>REGISTER</h1>
    
-    <form method="POST"> 
+    <form method="GET"> 
 
       Date:<input type="text" name="Date_time"><br>  
       st_y: <input type="text" name="st_y"><br>
@@ -25,16 +25,16 @@
 $url = "https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/odRouting";     
 $strAccessToken = "31cc9ed0-50f1-3b99-b4d1-8aca20de6213";
 
-   
+   var_dump($_GET);
  
-   $post_data =array(  
-        $date_time='yyyy-mm-dd' ,
-        $st_y = '08:00:00',
-        $st_x= '08:00:00',     
-        $en_y= '17:00:00' ,      
-        $en_x= '17:00:00'  ,    
-        $toll= '[0 or 1]'
-    ); 
+//    $post_data =array(  
+//         $date_time='yyyy-mm-dd' ,
+//         $st_y = '08:00:00',
+//         $st_x= '08:00:00',     
+//         $en_y= '17:00:00' ,      
+//         $en_x= '17:00:00'  ,    
+//         $toll= '[0 or 1]'
+//     ); 
        
     
     $header = array(
