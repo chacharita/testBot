@@ -2,7 +2,7 @@
 <html>
 <body>
     <div>
-    <center>
+    
    <h1>REGISTER</h1>
    <center>
     <form method="POST"> 
