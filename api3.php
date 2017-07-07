@@ -19,7 +19,7 @@ $commons = $_POST['commons'];
        
     
     $header = array(
-            'Content-Type:application/x-www-form-urlencoded',
+            'Content-Type:application/json',
             'Authorization: Bearer ' . $strAccessToken
             );
    
