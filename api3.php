@@ -9,7 +9,7 @@ $vehicles = $_POST['vehicles'];
 $vehicles1 = $_POST['vehicles'];
 $commons = $_POST['commons'];
 
-//var_dump($_POST);
+var_dump($_POST);
     
     $header = array(
             'Content-Type:application/x-www-form-urlencoded',
@@ -28,4 +28,5 @@ $commons = $_POST['commons'];
             curl_close($ch);
     
     var_dump($result);
+echo "dd";
 ?>
