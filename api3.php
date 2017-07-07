@@ -13,7 +13,7 @@ var_dump($_POST);
     
     $header = array(
             'Content-Type:application/x-www-form-urlencoded',
-            'Authorization: Bearer ' . $strAccessToken
+            'Authorization: Bearer'. $strAccessToken
             );
    
     
