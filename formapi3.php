@@ -5,7 +5,7 @@
     
    <h1>REGISTER</h1>
    
-    <form action="api3.php" method="GET"> 
+    <form action="api3.php" method="POST"> 
 
       stops:<input type="text" name="stops"><br>  
       vehicles: <input type="text" name="vehicles"><br>
