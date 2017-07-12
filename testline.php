@@ -36,9 +36,9 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post_data));
             curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
      
-            $result = curl_exec($ch);
+            $result = curl_exec($ch);var_dump($result);
             curl_close($ch);
-            return $result;
+            
 
             
    
