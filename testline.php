@@ -130,7 +130,6 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
         $url = 'https://api.line.me/v2/bot/message/push' ;
         $result ="";
         try{
-            var_dump($text ,$midUser,$strAccessToken);exit();
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_POST, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
