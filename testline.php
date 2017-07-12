@@ -102,6 +102,8 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
     $text           = $_POST['textArea'];
     $midUser        = $_POST['mid'];  
     $strAccessToken = $_POST['tokenLine'];
+
+var_dump($$text ,$midUser,$strAccessToken );
    $messages = array(
         "type" => "text",
         "text" => $text 
