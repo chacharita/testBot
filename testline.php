@@ -27,13 +27,14 @@
             <div class="col-xs-12 head-form">
                 <h1 align = "center">Push Massages</h1>
             </div>
-            
+            <h1 align = "right">@friend</h1>
+             <img src="http://qr-official.line.me/L/yf57GMufvz.png">
             <div class="col-md-8 col-md-offset-2">
                 <form method="post">
                     <div class="form-group">
                         <label>Line@</label><br>
                            
-                            <input type="radio"  class="btn btn-primary"  value="xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=" name="tokenLine"> Line@DX</input>
+                            <input type="radio"  class="btn btn-primary"  value="xV/huVeGtwzqkP96ryoZdb3X0BHoAyuIXaXlIbf2axHa+CTebqsx8np2B8jQGVhnm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDttf2ciCpLUM4jXevfZFg1pqEJjUsahi4On8qIg1ocUWgdB04t89/1O/w1cDnyilFU=" name="tokenLine">DX</input>
                          <br>
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
