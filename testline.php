@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="th">
-
-<body>
-    
-
-
-
 <?php
     // *** Configuration ***
 $proxy = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
@@ -32,7 +24,7 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
         //send_line_msg($post_data, $strAccessToken);
          $header = array(
             'Content-Type: application/json',
-            'Authorization: Bearer ' . '1QL7okx51BouvIsuWwVjsedRkrWPMt+syYO6BBdnPyamRGH6KsFUvs3E/oerQ/pfm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDuMPKje21tH34ndFCI0PNzXa530i04eOa4CgOiHUFqOJwdB04t89/1O/w1cDnyilFU='
+            'Authorization: Bearer ' . 'xjGIR1MZNjzmCI9qagfTX7ksvvmLJYmOZZfCaAvY52kld2Hm4SeDJtzRv31ZDyIum31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDtKyONakxR1kk6ADFzu3Ko5WWqxfhMcufHu3ldcWEhREAdB04t89/1O/w1cDnyilFU='
             );
      
         $url = 'https://api.line.me/v2/bot/message/push' ;
@@ -46,12 +38,9 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
      
             $result = curl_exec($ch);
             curl_close($ch);
-            //return $result;
+            return $result;
 
             
    
  
  ?>
-</body>
-
-</html>
