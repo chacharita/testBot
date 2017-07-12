@@ -96,8 +96,7 @@
  $proxy = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
 $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
     
-     
-    //$strAccessToken = 'QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=';            
+   
 
     //  *** Input ***
     $text           = $_POST['textArea'];
