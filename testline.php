@@ -103,7 +103,7 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
     $strAccessToken = $_POST['tokenLine'];
 
 print("text : ".$text);
-print()
+
 
 var_dump($text ,$midUser,$strAccessToken);
 
