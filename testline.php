@@ -109,11 +109,11 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
     );
      //  Loop Send Line msg
     $i =1;          
-    foreach($midUser as $key => $mid)
-    { 
+    //foreach($midUser as $key => $mid)
+    //{ 
         
         $post_data = array(
-            "to"        => $mid,
+            "to"        => 'Ub5fea2ff169cba24b2179fd33e59e454',
             "messages"  => [$messages]
         );
       
@@ -155,7 +155,7 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
            // var_dump($e);exit();
            echo  "Error (File : ".$e->getFile()." line : ".$e->getLine()."): ".$e->getMessage();
      }
-    }
+    //}
 
 
     /*function send_line_msg($post_data, $strAccessToken){
