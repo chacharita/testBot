@@ -102,30 +102,31 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
     $text           = $_POST['textArea'];
     $midUser        = $_POST['mid'];  
     $strAccessToken = $_POST['tokenLine'];
-   
+   $messages = array(
+        "type" => "text",
+        "text" => $text 
+    );
      //  Loop Send Line msg
     $i =1;          
     foreach($midUser as $key => $mid)
     {        
         print $i++ . ":send";
+        
         $post_data = array(
             "to"        => $mid,
             "messages"  => [$messages]
         );
       
-        send_line_msg($post_data,$header);
+        send_line_msg($post_data, $strAccessToken);
     }
 
 
     // *** Params ***
-    $messages = array(
-            "type" => "text",
-            "text" => $text 
-         );
+    
          
     
     
-    function send_line_msg($post_data,$header){
+    function send_line_msg($post_data, $strAccessToken){
         $header = array(
             'Content-Type: application/json',
             'Authorization: Bearer ' . $strAccessToken
