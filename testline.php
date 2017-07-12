@@ -33,7 +33,8 @@
                     <div class="form-group">
                         <label>Line@</label><br>
                            
-                            <input type="radio"  class="btn btn-primary"  value="QQ4FDBydERg5R34tFiff7M+OOuRNzYKDA/btJh4Whsgl0ztKiDparY2v3TyaoL1LQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBctP74gTqe5/G/kLHS2Ixe3w0jsLIaN0guHlHI+3q9c9ZQdB04t89/1O/w1cDnyilFU=" name="tokenLine">DX</input>
+                           <input type="radio"  class="btn btn-primary"  value="1QL7okx51BouvIsuWwVjsedRkrWPMt+syYO6BBdnPyamRGH6KsFUvs3E/oerQ/pfm31zNpHaY6lIWJ0LRzIqnxsgrBt0a+dKb56qqBmOlDuMPKje21tH34ndFCI0PNzXa530i04eOa4CgOiHUFqOJwdB04t89/1O/w1cDnyilFU=" name="tokenLine"> Line@ffon</input>
+                            <input type="radio"  class="btn btn-primary"  value="f9/uoIUNEP1kL2paNPKAH+EGLrCz2VYyDLRzADLiG6cUM838OEmvwuLDaHOX8Y8gQPMU/R+dN8JPUEl4UZ3VdcnPVwB3VGFVHPu6HhvSBcssXN77lyH4cRgzSRe+ubJT6jlMGO8SmAXXZaS0FNIeAQdB04t89/1O/w1cDnyilFU=" name="tokenLine"> Line@oil</input>
                          <br>
                         <label>Text</label>
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
@@ -93,25 +94,29 @@
 
 <?php
     // *** Configuration ***
- $proxy = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
+$proxy = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
 $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
     
-   
-
     //  *** Input ***
     $text           = $_POST['textArea'];
     $midUser        = $_POST['mid'];  
     $strAccessToken = $_POST['tokenLine'];
 
-var_dump($$text ,$midUser,$strAccessToken );
-   $messages = array(
-        "type" => "text",
-        "text" => $text 
-    );
+print("text : ".$text);
+print()
+
+var_dump($text ,$midUser,$strAccessToken);
+
+ 
      //  Loop Send Line msg
     $i =1;          
     foreach($midUser as $key => $mid)
-    {        
+    { 
+        // *** Params ***
+        $messages = array(
+        "type" => "text",
+        "text" => $text 
+    );
         print $i++ . ":send";
         
         $post_data = array(
@@ -123,19 +128,13 @@ var_dump($$text ,$midUser,$strAccessToken );
     }
 
 
-    // *** Params ***
-    
-         
-    
-    
     function send_line_msg($post_data, $strAccessToken){
         $header = array(
             'Content-Type: application/json',
             'Authorization: Bearer ' . $strAccessToken
             );
      
-      $url = 'https://api.line.me/v2/bot/message/push'
-           ;
+      $url = 'https://api.line.me/v2/bot/message/push' ;
         
         $ch = curl_init($url);
         $result ="";
