@@ -157,6 +157,7 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
            }
      }catch(exception $e)
         {
+            var_dump($e);exit();
            echo  "Error (File : ".$e->getFile()." line : ".$e->getLine()."): ".$e->getMessage();
         }
         curl_close($ch);
