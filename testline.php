@@ -102,13 +102,8 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
     $midUser        = $_POST['mid'];  
     $strAccessToken = $_POST['tokenLine'];
 
-print("text : ".$text);
-
-
-var_dump($text ,$midUser,$strAccessToken);
-
   // *** Params ***
-        $messages = array(
+    $messages = array(
         "type" => "text",
         "text" => $text 
     );
@@ -116,8 +111,6 @@ var_dump($text ,$midUser,$strAccessToken);
     $i =1;          
     foreach($midUser as $key => $mid)
     { 
-       
-        print $i++ . ":send";
         
         $post_data = array(
             "to"        => $mid,
@@ -134,11 +127,11 @@ var_dump($text ,$midUser,$strAccessToken);
             'Authorization: Bearer ' . $strAccessToken
             );
      
-      $url = 'https://api.line.me/v2/bot/message/push' ;
-        
-        $ch = curl_init($url);
+        $url = 'https://api.line.me/v2/bot/message/push' ;
         $result ="";
         try{
+            var_dump($text ,$midUser,$strAccessToken);exit();
+            $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_POST, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
