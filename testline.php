@@ -107,16 +107,16 @@ print()
 
 var_dump($text ,$midUser,$strAccessToken);
 
- 
-     //  Loop Send Line msg
-    $i =1;          
-    foreach($midUser as $key => $mid)
-    { 
-        // *** Params ***
+  // *** Params ***
         $messages = array(
         "type" => "text",
         "text" => $text 
     );
+     //  Loop Send Line msg
+    $i =1;          
+    foreach($midUser as $key => $mid)
+    { 
+       
         print $i++ . ":send";
         
         $post_data = array(
