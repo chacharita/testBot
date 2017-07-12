@@ -27,8 +27,7 @@
             <div class="col-xs-12 head-form">
                 <h1 align = "center">Push Massages</h1>
             </div>
-            <h1 align = "right">@friend</h1>
-             <img src="http://qr-official.line.me/L/yf57GMufvz.png">
+            
             <div class="col-md-8 col-md-offset-2">
                 <form method="post">
                     <div class="form-group">
