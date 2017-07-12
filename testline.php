@@ -139,7 +139,7 @@ $proxyauth = 'http://fixie:bBt21X0wwYroR2Z@velodrome.usefixie.com:80';
      
             $result = curl_exec($ch);
          
-            var_dump($result);exit();
+            var_dump($result['http_code']);exit();
             if($result['http_code'] == 200)
             {
               echo "ส่งข้อมูลเรียบร้อย";
