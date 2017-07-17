@@ -20,14 +20,4 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $_POST);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 $result = curl_exec($ch);
 curl_close($ch);
-var_dump($result)."<br><br>";
-echo "--------------------\n";
-var_dump($stops)."<br><br>";
-echo "--------------------\n";
-var_dump($vehicles)."<br><br>";
-echo "--------------------\n";
-var_dump($commons)."<br><br>";
-echo "--------------------\n";
-var_dump($_POST)."<br><br>";
-echo "--------------------\n";
-var_dump($ch)."<br><br>";
+
