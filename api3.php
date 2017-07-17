@@ -7,7 +7,7 @@ $stops = $_POST['stops'];
 $vehicles = $_POST['vehicles'];
 $commons = $_POST['commons'];
 
-var_dump($_POST);
+//var_dump($_POST);
     
     $header = array(
             'Content-Type:application/x-www-form-urlencoded',
@@ -25,6 +25,6 @@ var_dump($_POST);
             $result = curl_exec($ch);
             curl_close($ch);
     
-    var_dump($result);
-echo "dd";
+    var_dump(json_decode($result));
+
 ?>
