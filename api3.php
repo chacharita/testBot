@@ -17,7 +17,8 @@ $commons = $_POST['commons'];
  
             curl_setopt($ch, CURLOPT_POST, true);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST,'POST');
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);        
             curl_setopt($ch, CURLOPT_POSTFIELDS($_POST));
             curl_setopt($ch, CURLOPT_HTTPHEADER,$header);
             $result = curl_exec($ch);
