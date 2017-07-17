@@ -21,3 +21,5 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
 $result = curl_exec($ch);
 curl_close($ch);
 
+var_dump($result);
+
