@@ -23,7 +23,7 @@ $commons = $_POST['commons'];
             curl_setopt($ch, CURLOPT_HTTPHEADER,$header);
             $result = curl_exec($ch);
             curl_close($ch);
-    
-    var_dump($result);
+    return $result;
+    //var_dump($result);
 
 ?>
