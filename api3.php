@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <body>
     <div>
@@ -13,13 +13,14 @@
        
       <input type="submit" value="submit">         
     </form>
-    </div>
+    </div> -->
 <?php
 $stops =    $_POST['stops'];
 $vehicles = $_POST['vehicles'];
 $commons =  $_POST['commons'];
 
-$url = "https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/mvrp";
+$url = "https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/mvrp?commons=2017-06-01,1,0,1&vehicles=1,13.8036917,100.5542416,13.8036917,100.5542416,08:00:00,17:00:00,80
+\n2,13.79518,100.61217,13.81042,100.65585,08:00:00,17:00:00,40&stops=1,13.8036917,100.5542416,30,08:00:00,17:00:00\n2,13.8755595,100.6191486,30,08:00:00,17:00:00";
 $strAccessToken = "31cc9ed0-50f1-3b99-b4d1-8aca20de6213";	
 
 $header = array(
@@ -40,6 +41,6 @@ curl_close($ch);
 var_dump($result);
   var_dump($_POST);
 ?>
-</body>
-</html>
+<!-- </body>
+</html> -->
 
