@@ -21,8 +21,14 @@ $strAccessToken = "31cc9ed0-50f1-3b99-b4d1-8aca20de6213";
             curl_close($ch);
        
 
-var_dump($result);
-var_dump(urldecode($result));
+// var_dump($result);
+// var_dump(urldecode($result));
+$a = json_decode($result);
+echo 'this is decode\n';
+var_dump($a);
+// echo 'this is urldecode\n';
+// var_dump($a);
+
    
       //  $de = rawurlencode($result);
 //   $de = rawurlencode($result);
