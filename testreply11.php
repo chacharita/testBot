@@ -4,7 +4,7 @@
 
 <h1 align = 'center'>@ME</h1>
     <P align=center>
-        <img src="http://qr-official.line.me/L/oUypr1a-r8.png">
+        <img src="http://qr-official.line.me/L/yf57GMufvz.png">
     </P>
     <div align=center>line@ffon</div>
 
