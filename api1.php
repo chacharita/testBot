@@ -25,10 +25,13 @@ $strAccessToken = "31cc9ed0-50f1-3b99-b4d1-8aca20de6213";
   $de = rawurlencode($result);
      //$de =json_decode($result);
         
-        var_dump($de);
-        echo "                                 ";
+       // var_dump($de);
+       // echo "                                 ";
         $da = rawurldecode($de);
-        var_dump(json_decode($da));
+        $aa = json_decode($da);
+        $bb = aa->route;
+        $cc = rawurldecode($bb);
+        var_dump($cc);
 
 
 ?>
