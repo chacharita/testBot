@@ -20,22 +20,25 @@ $strAccessToken = "31cc9ed0-50f1-3b99-b4d1-8aca20de6213";
             $result = curl_exec($ch);
             curl_close($ch);
        
+
+var_dump($result);
+var_dump(urldecode($result));
    
       //  $de = rawurlencode($result);
-  $de = rawurlencode($result);
-     //$de =json_decode($result);
+//   $de = rawurlencode($result);
+//      //$de =json_decode($result);
         
-       // var_dump($de);
-       // echo "                                 ";
-        $da = rawurldecode($de);
-        $aa = json_decode($da);
-        $bb = $aa[0]->Legs;
-        $bbb = $bb[0]->Route;
-//         $cc = rawurlencode($bb);
-        var_dump($bbb . "   ");
-        var_dump(urldecode($bbb));
+//        // var_dump($de);
+//        // echo "                                 ";
+//         $da = rawurldecode($de);
+//         $aa = json_decode($da);
+//         $bb = $aa[0]->Legs;
+//         $bbb = $bb[0]->Route;
+// //         $cc = rawurlencode($bb);
+//         var_dump($bbb . "   ");
+//         var_dump(urldecode($bbb));
         
-//        var_dump($bb);
+// //        var_dump($bb);
 
 
 ?>
