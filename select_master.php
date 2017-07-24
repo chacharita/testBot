@@ -99,7 +99,7 @@
                                                 
                                                 ?>
                                             
-                                            <?php
+<!--                                              <?php
                                             $link = mysql_connect("localhost","root"," ")
                                                 mysql_select_db("connect_mid",$link);
                                             ?>
@@ -109,7 +109,7 @@
                                                 while($rr = mysql_fetch_object($qr)){
                                                     echo $show->id." ".$show->name." ".$show->token." ";
                                                 }
-                                              ?>      
+                                              ?>        -->
                                             
                                             <?php 
                                             
