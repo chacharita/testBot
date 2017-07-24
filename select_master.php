@@ -97,9 +97,8 @@
                                                 $count = count($de);
                                                
                                             ?>
-                                             //เลือกline add นั้นจะแสดงแค่ชื่อ memberที่มีใน line add
-                                            <?php 
-                                            
+                                             
+                                            <?php                                     
                                             if($de_line_mas->id == $de_member->line_master_id){
                                                     for($i=0;$i<$count;$i++){ ?>
                                                         <div class="checkbox">
