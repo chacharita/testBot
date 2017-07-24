@@ -99,22 +99,11 @@
                                                 
                                                 ?>
                                             
-<!--                                       //       <?php
-                                          //  $link = mysql_connect("localhost","root"," ")
-                                          //      mysql_select_db("connect_mid",$link);
-                                          //  ?>
-                                          //  <?php
-                                           //  $q = "select * from line_account";
-                                           //  $qr = mysql_query($q);
-                                              //  while($rr = mysql_fetch_object($qr)){
-                                                    echo $show->id." ".$show->name." ".$show->token." ";
-                                            //    }
-                                            //  ?>        -->
                                             
                                             <?php 
                                             
-                                            if($de_line_mas->line_name == $de->line_master_id){
-                                                    for($i=0;$i<$count;$i++){ ?>
+                                            if($de_line_mas->id == $de->line_master_id){
+                                                    for($i=0;$i<$count;$i--){ ?>
                                                         <div class="checkbox">
                                                            <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                                         </div>
