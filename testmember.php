@@ -65,8 +65,8 @@
                     <!--buttonMember-->
                     <div class="form-group" align="center">
                         <button type="button"  onclick="member_bot()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
-                        MEMBER <text type="text" id = "token_line_mas_id"></text>
-                        </button>
+                        MEMBER 
+                        </button><text type="text" id = "token_line_mas_id"></text>
                     </div>
                     <!--Modal-->
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -137,7 +137,7 @@
         console.log(document.getElementById("token_line_mas_id").value);
              $.post("https://chuppytest.herokuapp.com/testmember.php",{
                 
-                   id : token_line_mas_id )
+            //       id : token_line_mas_id )
          }
 </script>
     
