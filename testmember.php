@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-11
+14
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -134,8 +134,7 @@
             $('#myInput').focus()
         })
         function member_bot() {
-            
-            document.getElementById("id").value;
+            console.log(document.getElementById("token_line_mas_id").value);
         }
 </script>
     
