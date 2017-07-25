@@ -93,17 +93,16 @@
                                                 $err    = curl_error($chAdd);
                                                 curl_close($chAdd);
                                             
-                                                $de_member = json_decode($result);
+                                                $de = json_decode($result);
                                                 $count = count($de);
                                                
-                                            ?>
+                                                
+                                                ?>
                                             
-                                            <?php 
-                                            
-                                            if($de_line_mas->id == $de->line_master_id){
-                                                    //for($i=0;$i<$count;$i++){ ?>
+                                            <?php if($de_line_mas->id == $de->line_master_id){
+                                                    for($i=0;$i<$count;$i++){ ?>
                                                         <div class="checkbox">
-                                                            <label><input type="checkbox" value="<?php echo $de->user_id; ?>" name="mid"> <?php echo $de->member_name; echo "  "; echo $de->user_id; ?></label>
+                                                            <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                                         </div>
                                            <?php }}?>
                                         </div>
