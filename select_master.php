@@ -95,13 +95,7 @@
                                             
                                                 $de_member = json_decode($result);
                                                 $count = count($de);
-                                              
-                                            ?>
-                                            
-                                            
-                                            ?>
-                                            <?php 
-                                            
+                                             
                                             if($de_line_mas->id  == $de->line_master_id){
                                                     for($i=0;$i<$count;$i++){ 
                                                         <div class="checkbox">
