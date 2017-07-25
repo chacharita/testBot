@@ -100,10 +100,10 @@
                                             
                                             <?php 
                                             
-                                            if($de_line_mas->id == $de_member->line_master_id){
+                                            if($de_line_mas->id == $de->line_master_id){
                                                     for($i=0;$i<$count;$i++){ ?>
                                                         <div class="checkbox">
-                                                            <label><input type="checkbox" value="<?php echo $de_member[$i]->user_id; ?>" name="mid[]"> <?php echo $de_member[$i]->member_name; echo "  "; echo $de_member[$i]->user_id; ?></label>
+                                                            <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
                                                         </div>
                                            <?php }}?>
                                         </div>
