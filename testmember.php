@@ -100,12 +100,12 @@
                                                 ?>
                                             
                                             <?php   
-                                                    $line_a_id = $_GET['token_line_mas'];
-                                                    var_dump("sss");
-                                                    var_dump($line_a_id);
-                                                    if($de_line_mas->id == $de->line_master_id){
-//                                                     var_dump ($de_line_mas);
-//                                                     var_dump ($de);
+                                                     $line_a_id = $_GET['token_line_mas'];
+                                                     var_dump("sss");
+                                                     var_dump($line_a_id);
+                                                     if($de_line_mas->id == $de->line_master_id){
+                                                     var_dump ($de_line_mas);
+                                                     var_dump ($de);
                 
                                                     for($i=0;$i<$count;$i++){ ?>
                                                         <div class="checkbox">
@@ -133,9 +133,12 @@
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
         })
-        function member_bot() {
-            console.log(document.getElementById("token_line_mas_id").value);
-        }
+//         function member_bot() {
+//             console.log(document.getElementById("token_line_mas_id").value);
+//             $.post("https://chuppytest.herokuapp.com/testmember.php",{
+                
+//                   id :  )
+//         }
 </script>
     
 
