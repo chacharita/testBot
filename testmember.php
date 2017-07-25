@@ -100,8 +100,8 @@
                                                 ?>
                                             
                                             <?php if($de_line_mas->id == $de->line_master_id){
-                                                    var_dump ($de_line_mas->id);
-                                                    var_dump ($de->line_master_id);
+                                                    var_dump ($de_line_mas);
+                                                    var_dump ($de);
                 
                                                     for($i=0;$i<$count;$i++){ ?>
                                                         <div class="checkbox">
