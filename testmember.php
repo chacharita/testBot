@@ -64,7 +64,7 @@
                     
                     <!--buttonMember-->
                     <div class="form-group" align="center">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
+                        <button type="button" onclick="member_bot()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
                         MEMBER
                         </button>
                     </div>
@@ -133,11 +133,11 @@
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
         })
+        function member_bot() {
+            document.getElementById("mySelect").value;
+        }
+</script>
     
-        $('#id').on('click', function ()) {
-           
-        })
-    </script>
 
 
 </body>
