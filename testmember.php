@@ -135,7 +135,7 @@
         })
         function member_bot() {
             
-            document.getElementById("mySelect").value
+            document.getElementById("id").value;
         }
 </script>
     
