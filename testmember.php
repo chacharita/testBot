@@ -65,7 +65,7 @@
                     <!--buttonMember-->
                     <div class="form-group" align="center">
                         <button type="button"  onclick="member_bot()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
-                        MEMBER
+                        MEMBER <text type="text" id = "token_line_mas_id"></text>
                         </button>
                     </div>
                     <!--Modal-->
