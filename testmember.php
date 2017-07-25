@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-09
+tr1111
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -100,9 +100,9 @@
                                                 ?>
                                             
                                             <?php   
-                                                //     $line_a_id = $_GET['token_line_mas'];
-                                                //     var_dump("sss");
-                                                  //   var_dump($line_a_id);
+                                                    $line_a_id = $_GET['token_line_mas'];
+                                                     var_dump("sss");
+                                                     var_dump($line_a_id);
                                                    //  if($de_line_mas->id == $de->line_master_id){
 //                                                      var_dump ($de_line_mas);
 //                                                      var_dump ($de);
