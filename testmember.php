@@ -138,7 +138,7 @@
              $.post("https://chuppytest.herokuapp.com/testmember.php",{
                 
             //       id : token_line_mas_id )
-         }
+         }}
 </script>
     
 
