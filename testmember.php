@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
-11  
+1
 <head>
     <title>Push Messages</title>
     <meta charset="utf-8">
@@ -64,7 +64,7 @@
                     
                     <!--buttonMember-->
                     <div class="form-group" align="center">
-                        <button type="button"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
+                        <button type="button"  onclick="member_bot()" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
                         MEMBER
                         </button>
                     </div>
@@ -133,12 +133,12 @@
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
         })
-//         function member_bot() {
-//             console.log(document.getElementById("token_line_mas_id").value);
+         function member_bot() {
+        console.log(document.getElementById("token_line_mas_id").value);
 //             $.post("https://chuppytest.herokuapp.com/testmember.php",{
                 
 //                   id :  )
-//         }
+         }
 </script>
     
 
