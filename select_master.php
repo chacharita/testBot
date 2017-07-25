@@ -62,64 +62,7 @@
                         <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
                     </div>
                     
-                    <!--buttonMember-->
-                    <div class="form-group" align="center">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
-                        MEMBER
-                        </button>
-                    </div>
-                    <!--Modal-->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <form method="GET">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Member</h4>
-                                    </div>
-                                    <div class="container">
-                                        <div class="checkbox">
-                                            <?php
-                                                    
-                                                $chAdd = curl_init();
-                                                curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
-                                                curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
-                                                curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
-                                                curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
-                                                "Content-Type: application/json",
-                                                                        )
-                                                );
-                                                $result = curl_exec($chAdd);
-                                                $err    = curl_error($chAdd);
-                                                curl_close($chAdd);
-                                            
-                                                $de = json_decode($result);
-                                                $count = count($de);
-                                               
-                                                
-                                                ?>
-                                            
-                                            <?php if($de_line_mas->id == $de->line_master_id){
-                                                    for($i=0;$i<$count;$i++){ ?>
-                                                        <div class="checkbox">
-                                                            <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
-                                                        </div>
-                                           <?php }}?>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-primary" name="submit">Summit</button>
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                   
 
     <script>
         $('#myModal').on('shown.bs.modal', function () {
