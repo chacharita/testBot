@@ -57,8 +57,15 @@
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
                                     <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php  echo $de_line_mas[$j]->line_name; ?></option>
                                 <? } ?> 
-                        
-                   MEMBER
+                           </select><br> 
+                        <label>Text</label>
+                        <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
+                    </div>
+                    
+                    <!--buttonMember-->
+                    <div class="form-group" align="center">
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top:30px;margin-bottom:20px;">
+                        MEMBER
                         </button>
                     </div>
                     <!--Modal-->
@@ -89,11 +96,32 @@
                                                 $de = json_decode($result);
                                                 $count = count($de);
                                                
-                                                echo $chAdd;
+                                                
                                                 ?>
-                                           
                                             
-                               
+                                            <?php 
+                                            while($de_line_mas->id == $de->line_master_id){
+                                            //if($de_line_mas->id == $de->line_master_id){
+                                                   // for($i=0;$i<$count;$i++){ ?>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
+                                                        </div>
+                                           <?php }?>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary" name="submit">Summit</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script>
         $('#myModal').on('shown.bs.modal', function () {
