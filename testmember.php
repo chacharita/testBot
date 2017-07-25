@@ -104,8 +104,8 @@
                                                      var_dump("sss");
                                                      var_dump($line_a_id);
                                                      if($de_line_mas->id == $de->line_master_id){
-                                                     var_dump ($de_line_mas);
-                                                     var_dump ($de);
+//                                                      var_dump ($de_line_mas);
+//                                                      var_dump ($de);
                 
                                                     for($i=0;$i<$count;$i++){ ?>
                                                         <div class="checkbox">
