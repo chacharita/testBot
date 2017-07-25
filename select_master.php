@@ -57,11 +57,7 @@
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
                                     <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php  echo $de_line_mas[$j]->line_name; ?></option>
                                 <? } ?> 
-                           </select><br> 
-                        <label>Text</label>
-                        <textarea class="form-control" rows="8" id="textArea" name="textArea"></textarea>
-                    </div>
-                    
+                        
                    
 
     <script>
