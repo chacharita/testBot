@@ -58,7 +58,39 @@
                                     <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php  echo $de_line_mas[$j]->line_name; ?></option>
                                 <? } ?> 
                         
-                  
+                   MEMBER
+                        </button>
+                    </div>
+                    <!--Modal-->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <form method="GET">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Member</h4>
+                                    </div>
+                                    <div class="container">
+                                        <div class="checkbox">
+                                            <?php
+                                                    
+                                                $chAdd = curl_init();
+                                                curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
+                                                curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+                                                curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+                                                curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+                                                "Content-Type: application/json",
+                                                                        )
+                                                );
+                                                $result = curl_exec($chAdd);
+                                                $err    = curl_error($chAdd);
+                                                curl_close($chAdd);
+                                            
+                                                $de = json_decode($result);
+                                                $count = count($de);
+                                               
+                                                
+                                                ?>
                                            
                                             
                                
