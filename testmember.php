@@ -135,10 +135,10 @@
         })
          function member_bot(){
         console.log(document.getElementById("token_line_mas_id").value);
-             $.post("https://chuppytest.herokuapp.com/testmember.php",{
+         //    $.post("https://chuppytest.herokuapp.com/testmember.php",
                 
             //       id : token_line_mas_id )
-         }}
+         }
 </script>
     
 
