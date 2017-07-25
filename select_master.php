@@ -58,7 +58,33 @@
                                     <option  value="<?php echo $de_line_mas[$j]->access_token;  ?>" > <?php  echo $de_line_mas[$j]->line_name; ?></option>
                                 <? } ?> 
                         
-                   
+                    <?php
+                                                    
+                                                $chAdd = curl_init();
+                                                curl_setopt($chAdd, CURLOPT_URL, 'http://uat.dxplace.com/dxtms/get_line_member');
+                                                curl_setopt($chAdd, CURLOPT_CUSTOMREQUEST, 'GET');
+                                                curl_setopt($chAdd, CURLOPT_RETURNTRANSFER, true);
+                                                curl_setopt($chAdd, CURLOPT_HTTPHEADER, array(
+                                                "Content-Type: application/json",
+                                                                        )
+                                                );
+                                                $result = curl_exec($chAdd);
+                                                $err    = curl_error($chAdd);
+                                                curl_close($chAdd);
+                                            
+                                                $de = json_decode($result);
+                                                $count = count($de);
+                                               
+                                                
+                                                ?>
+                                            
+                                            <?php if($de_line_mas->id == $de->line_master_id){
+                                                    for($i=0;$i<$count;$i++){ ?>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="<?php echo $de[$i]->user_id; ?>" name="mid[]"> <?php echo $de[$i]->member_name; echo "  "; echo $de[$i]->user_id; ?></label>
+                                                        </div>
+                                           <?php }}?>
+                               
 
     <script>
         $('#myModal').on('shown.bs.modal', function () {
