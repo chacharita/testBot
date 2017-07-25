@@ -53,7 +53,7 @@
                             ?>
 
                         <label>Line@</label><br>
-                           <select name="token_line_mas">
+                           <select id="token_line_mas_id" name="token_line_mas">
                                <?php for($j=0;$j<$count_line_mas;$j++){ ?>
                                     <option  value="<?php echo $de_line_mas[$j]->id;  ?>" > <?php  echo $de_line_mas[$j]->line_name; ?></option>
                                 <? } ?> 
@@ -132,6 +132,10 @@
     <script>
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus()
+        })
+    
+        $('#id').on('click', function ()) {
+           
         })
     </script>
 
