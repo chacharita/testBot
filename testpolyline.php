@@ -40,8 +40,7 @@ for ($i = 2; $i < count($results); $i++) {
 }
 
 # chunk the array into pairs of lat/lon values
-var_dump(array_chunk($results,2));
-//var_dump(array_chunk($results, 2));
+var_dump(array_chunk($results, 2));
 
 # Test correctness by using Google's polylineutility here:
 # https://developers.google.com/maps/documentation/utilities/polylineutility
