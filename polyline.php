@@ -26,7 +26,6 @@ do {
 for ($i = 2; $i < count($results); $i++) {
   $results[$i] += $results[$i - 2];
 }
-
 var_dump(array_chunk($results, 2));
 
 
