@@ -14,7 +14,7 @@ do {
     
     $result |= ($char & 0x1F) << (5 * $shift);
     $shift++; $index++;
-  } while ($char >= 0x50); # Step 8 most significant bit in each six bit chunk
+  } while ($char >= 0x20); # Step 8 most significant bit in each six bit chunk
       
   if ($result & 1)
   $result = $result;
