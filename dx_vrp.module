@@ -1,0 +1,171 @@
+<?php
+/**
+ * Implement hook_menu().
+ */
+function dx_vrp_menu()
+{
+    $items = array();
+    $menu = 'dx_vrp';
+    $items[$menu.'/vrp'] = array(
+          'page callback'     => 'dx_vrp_vrp', 
+          'access callback'   => true, 
+    );
+    
+    //$items['$menu.'/'response'] = array(
+//          'page callback'   => 'dx_vrp_response',
+//          'access callback' => true,
+    
+//    );
+
+    //$items[$menu.'/']
+    
+    return $items;
+}
+//https://uat.dxplace.com/dx_vrp/dx_vrp_vrp
+//https://uat.dxplace.com/dx_vrp/dx_vrp_response
+function dx_vrp_theme(){
+
+    //$menu = 'dx_vrp';
+    return array(
+        'vrp_view' => array(
+            'template' => 'vrp',
+            'path'     => DX_MODULE_BASE_PATH.'/modules/dx_vrp',
+        ),
+        
+    //$menu = 'dx_response';
+        'vrp_view' => array(
+            'template' => 'response',
+            'path' => DX_MODULE_BASE_PATH.'/modules/dx_vrp', 
+        ),
+        
+       // 'response_view' => array(
+//             'template' => 'response',
+//             'path'     => DX_MODULE_BASE_PATH.'/modules/dx_vrp',
+//        ),
+        
+    );
+}
+
+function dx_vrp_vrp(){
+    
+    return drupal_get_form('dx_vrp_form');
+}
+
+
+
+function db_select($table,$alias = null,array $options = array()){
+    if(enpty($options['target'])){
+        $options['target'] = 'default';
+    }
+    return $table ;
+}
+
+ 
+   
+
+
+
+function dx_vrp_form($form,&$form_state){
+    
+    //$form = array();
+//    $form['commons'] = array(
+//    '#type' => 'textfield',
+//    '#title' => t('Commons'),
+//    '#required' =>TRUE,
+//    '#description' => "input parameter commoms",
+    //'#size' => 20,
+    
+  //  );
+    $form['com'] = array(
+    '#title' => t('coms'),
+    '#type' => "select",
+    '#description' => 'select commons.',
+    '#options' => array(t('---select---'), t('10'),t('12'),t('13')
+        ) ,
+    
+    );
+    $form['vehicles'] =array(
+    '#title' => t('vehicle'),
+    '#type' => "select",
+    '#description' => 'select vehicle.',
+    '#option' => array(t('----select----'),)
+    
+    
+    );
+    
+   // $form['vehicles'] = array(
+//    '#type' => 'textfield',
+//    '#title' => t('Vehicle '),
+//    '#required' => TRUE,
+//    '#description' => "input parameter vehicles",
+//    '#size' => 20,
+    
+ //   );
+    $form['stops'] = array(
+    '#title' => t('stops'),
+    '#type' => "select",
+    '#description' => 'select stops.',
+    '#option' => array(t('----select----'),
+    )
+    
+    );
+    
+    //$form['stops'] = array(
+//    '#type' =>'textfield',
+//    '#title' => t('Stops'),
+//    '#required' => TRUE,
+//    '#description' => "input parameter stops",
+//    '#size' => 20,
+   
+  //  );
+    
+      
+    $form['submit'] = array(
+    '#type' =>'submit',
+    '#value' =>'Submit',
+    );
+    return $form;
+}                          
+
+function dx_vrp_form_submit($form,&$form_state){
+    var_dump($form_state);
+    
+   // foreach($dx_vrp_form as $key =>$dx_vrp_form){
+        
+        
+        
+        
+    
+    
+    
+    
+
+    
+//send parameter to toyota****** 
+//function dx_vrp_send($form=null,&$form_state=null){
+    
+    $strAccessToken = "31cc9ed0-50f1-3b99-b4d1-8aca20de6213";
+    $arrHeader = array();
+    $arrHeader[] = "Content-Type: application/json";
+    $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
+    $url = "https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/mvrp";
+    
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST,$form_state);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $form_state);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    var_dump($result);
+         
+ 
+ 
+exit();
+}
+  
+    
+    
+ 
