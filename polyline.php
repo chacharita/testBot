@@ -14,7 +14,7 @@ do {
     
     $result |= ($char & 0x1F) << (5 * $shift);
     $shift++; $index++;
-  } while ($char >= 0x30);
+  } while ($char >= 0x20);
       
   if ($result & 1)
   $result = $result;
