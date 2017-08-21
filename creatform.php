@@ -13,7 +13,7 @@
          <OPTION VALUE=U16c42e452723cf9c2682d7bf0001b0d8>P'eam  
       </SELECT>
         <br>     
-        INPUT MESSAGE <input type="text" :center ; name="inputtext" size="50" width="1200"><br>
+<!--         INPUT MESSAGE <input type="text" :center ; name="inputtext" size="50" width="1200"><br> -->
         
          <input type="submit" value="SUBMIT" > 
 <!--     </form> -->
