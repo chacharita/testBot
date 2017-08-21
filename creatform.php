@@ -3,9 +3,9 @@
 <body>
     <div>
     <center>
-    <h1 style="text-align>PUSH_MESSAGE</h1>
+    <h1 style="text-align">DX VRP</h1>
    <center>
-    <form action="pushbot.php" method="POST">
+<!--     <form action="" method="POST"> -->
     <SELECT>
          <OPTION name=["name"]>--- เลือก Member ---
          <OPTION VALUE=U7de80d0a2ceea863e831375badd2eb55>ffon 
@@ -16,7 +16,7 @@
         INPUT MESSAGE <input type="text" :center ; name="inputtext" size="50" width="1200"><br>
         
          <input type="submit" value="SUBMIT" > 
-    </form>
+<!--     </form> -->
     </div>
 </body>
 </html>
