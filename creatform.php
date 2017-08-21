@@ -2,7 +2,7 @@
 <html>
 <body>
     <div>
-    <center>
+<!--     <center> -->
     <h1 style="text-align">DX VRP</h1>
    <center>
 <!--     <form action="" method="POST"> -->
