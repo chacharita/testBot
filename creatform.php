@@ -4,7 +4,7 @@
     <div>
 <!--     <center> -->
     <h1 style="text-align">DX VRP</h1>
-   <center>
+<!--    <center> -->
 <!--     <form action="" method="POST"> -->
     <SELECT>
          <OPTION name=["name"]>--- เลือก Member ---
