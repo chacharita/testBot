@@ -1,3 +1,4 @@
+<?php
 $request = new HttpRequest();
             $request->setUrl('https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/mvrp');
             $request->setMethod(HTTP_METH_POST);
@@ -27,3 +28,4 @@ $request = new HttpRequest();
   
     exit();   
  }
+?>
