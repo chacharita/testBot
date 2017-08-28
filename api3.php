@@ -5,7 +5,7 @@ $request->setUrl('https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/mvrp')
 $request->setMethod(HTTPS_METH_POST);
 
 $request->setHeaders(array(
-  'postman-token' => 'f5dc9119-2253-5ded-41bd-c4b70ce77a66',
+  
   'cache-control' => 'no-cache',
   'authorization' => 'Bearer 31cc9ed0-50f1-3b99-b4d1-8aca20de6213',
   'content-type' => 'application/x-www-form-urlencoded'
