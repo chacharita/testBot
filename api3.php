@@ -1,28 +1,55 @@
 <?php
-$stops =    $_POST['stops'];
-$vehicles = $_POST['vehicles'];
-$commons =  $_POST['commons'];
 
-$url = "https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/mvrp";
-$strAccessToken = "31cc9ed0-50f1-3b99-b4d1-8aca20de6213";	
+$request = new HttpRequest();
+$request->setUrl('https://apiplatform.rtic-thai.info:8243/logistics/1.0.0/mvrp');
+$request->setMethod(HTTP_METH_POST);
 
-$header = array(
-'Content-Type:application/x-www-form-urlencoded',
-'Authorization: Bearer ' .$strAccessToken
-);
+$request->setHeaders(array(
+  'postman-token' => 'f5dc9119-2253-5ded-41bd-c4b70ce77a66',
+  'cache-control' => 'no-cache',
+  'authorization' => 'Bearer 31cc9ed0-50f1-3b99-b4d1-8aca20de6213',
+  'content-type' => 'application/x-www-form-urlencoded'
+));
 
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $_POST);
-curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-$result = curl_exec($ch);
-curl_close($ch);
+$request->setContentType('application/x-www-form-urlencoded');
+$request->setPostFields(array(
+  'commons' => '2017-08-08,1,1,1',
+  'vehicles' => '1,13.8036917,100.5542416,13.8036917,100.5542416,08:00:00,17:00:00,80
+2,13.795082, 100.596549,13.107056, 101.133106,08:00:00,17:00:00,80
+3,13.795082, 100.596549,13.787504, 100.487924,08:00:00,17:00:00,80
+4,13.773944, 100.542689,13.787504, 100.487924,08:00:00,17:00:00,80 
+5,13.795082, 100.596549,13.8036917,100.5542416,08:00:00,17:00:00,100 ',
+  'stops' => '1,13.813567,100.560139,30,08:00:00,17:00:00
+2,13.817464,100.561683,30,08:00:00,17:00:00
+3,13.803024,100.551458,30,08:00:00,17:00:00
+4,13.80614,100.573501,30,08:00:00,17:00:00
+5,13.808766, 100.572578,30,08:00:00,17:00:00
+6,13.810568, 100.572031,30,08:00:00,17:00:00
+7,13.811381, 100.574230,30,08:00:00,17:00:00
+8,13.813704, 100.576268,30,08:00:00,17:00:00
+9,13.816642, 100.576257,30,08:00:00,17:00:00
+10,13.818872, 100.577770,30,08:00:00,17:00:00
+11,13.819893, 100.575571,30,08:00:00,17:00:00
+12,13.821758, 100.575303,30,08:00:00,17:00:00
+13,13.824071, 100.573586,30,08:00:00,17:00:00
+14,13.825561, 100.575914,30,08:00:00,17:00:00
+15,13.907412, 100.603562,30,08:00:00,17:00:00
+16,14.022223, 100.629036,30,08:00:00,17:00:00
+17,14.388079, 100.611789,30,08:00:00,17:00:00
+18,14.458330, 100.567974,30,08:00:00,17:00:00
+19,14.602673, 100.430972,30,08:00:00,17:00:00
+20,14.853135, 100.424384,30,08:00:00,17:00:00
+21,14.851846, 100.420680,30,08:00:00,17:00:00
+22,14.879840, 100.440275,30,08:00:00,17:00:00
+23,15.205410, 100.066831,30,08:00:00,17:00:00
+24,15.267533, 99.954446,30,08:00:00,17:00:00 
+25,16.790468, 100.371167,30,08:00:00,17:00:00  '
+));
 
-var_dump($result);
-  var_dump($_POST);
-?>
+try {
+  $response = $request->send();
 
-
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
