@@ -17,7 +17,7 @@ do {
     
   
   if ($result & 1)
-    $result = ~$result;
+    $result = $result;
   
   $result = ($result >> 1) * 0.00001;
   $results[] = $result;
@@ -28,7 +28,7 @@ for ($i = 2; $i < count($results); $i++) {
 }
 
 
-var_dump(array_chunk($results, 1));
+var_dump(array_chunk($results, 2));
 
 
 ?>
