@@ -11,7 +11,7 @@ class Issue10 extends PHPUnit_Framework_TestCase
     {
         $originalPoints = array(48.000006, 2.000004, 48.00001, 2.0);
         $encoded = Polyline::Encode($originalPoints);
-        $this->assertEquals('a_~cH_seK??', $encoded);
+        $this->assertEquals('a%60gsA_ovdRii%40%7BWcDcBa%40%5Dm%40SoCmAm%40UuCgB', $encoded);
         $decodedPoints = Polyline::Decode($encoded);
         $this->assertTrue($decodedPoints[0] === $decodedPoints[2]);
         $this->assertTrue($decodedPoints[1] === $decodedPoints[3]);
