@@ -13,13 +13,14 @@ do {
     
     $result |= ($char & 0x1F) << (5 * $shift);
     $shift++; $index++;
-  } while ($char >= 0x20); 
+  } 
+  while ($char >= 0x20); 
     
   
   if ($result & 1)
     $result = $result;
   
-  $result = ($result >> 1) * 0.0001;
+  $result = ($result >> 1) * 0.00001;
   $results[] = $result;
 } while ($index < count($byte_array));
 
