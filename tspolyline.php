@@ -4,16 +4,16 @@ $string = "iwsyAak%7CcRjGsPv%40yCf%40%7DCnD_MpC%7DOB%5BGMg%40Q_BeAe%40Q%7D%40OsC
 $byte_array = array_merge(unpack('C*', $string));
 $results = array();
 
-$index = 0; # tracks which char in $byte_array
+$index = 0;
 do {
   $shift = 0;
   $result = 0;
   do {
-    $char = $byte_array[$index] - 63; # Step 10
+    $char = $byte_array[$index] - 63; 
     
     $result |= ($char & 0x1F) << (5 * $shift);
     $shift++; $index++;
-  } while ($char >= 0x20); # Step 8 most significant bit in each six bit chunk
+  } while ($char >= 0x20); 
     
   
   if ($result & 1)
@@ -28,7 +28,7 @@ for ($i = 2; $i < count($results); $i++) {
 }
 
 
-var_dump(array_chunk($results, 2));
+var_dump(array_chunk($results, 1));
 
 
 ?>
