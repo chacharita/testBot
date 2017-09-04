@@ -5,8 +5,6 @@
 <input type="hidden" name="mapLong">
 <input type="text" name="location">
 <input type="submit" name="submit" value="submit">
-</form>
-</html>
 
 
 
@@ -32,4 +30,7 @@ function get_lat_long($address){
     $long = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
     return $lat.','.$long;
 }
+</form>
+</html>
+
 ?>
