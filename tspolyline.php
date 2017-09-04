@@ -19,14 +19,13 @@ do {
   if ($result & 1)
     $result = $result;
   
-  $result = ($result >> 1) * 0.00001;
+  $result = ($result >> 1) * 0.0001;
   $results[] = $result;
 } while ($index < count($byte_array));
 
 for ($i = 2; $i < count($results); $i++) {
   $results[$i] += $results[$i - 2];
 }
-
 
 var_dump(array_chunk($results, 2));
 
