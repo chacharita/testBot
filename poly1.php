@@ -19,10 +19,10 @@ $lat = "13.905000";
         {
           $state = $key->long_name;
         }
-        if($key->types[0] == 'locality')
+        if($key->types[0] == 'location')
         {
           $country = $key->long_name;
         }
       }
-      echo "Country : ".$country." ,State : ".$state." ,City : ".$city;
+      echo "location : ".$country." ,State : ".$state." ,City : ".$city;
 ?>
