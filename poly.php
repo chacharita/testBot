@@ -1,36 +1,41 @@
 <?php
-<html>
-<form>
-<input type="hidden" name="mapLat">
-<input type="hidden" name="mapLong">
-<input type="text" name="location">
-<input type="submit" name="submit" value="submit">
-
-
-
-extact($_POST);
-if($mapLat =='' && $mapLong ==''){
-        // Get lat long from google
-        $latlong    =   get_lat_long($location); // create a function with the name "get_lat_long" given as below
-        $map        =   explode(',' ,$latlong);
-        $mapLat         =   $map[0];
-        $mapLong    =   $map[1];    
+/* 
+	Get Country, State & City from Google's Geocoding API
+	http://www.beliefmedia.com/reverse-geocoding-google-maps
+*/
+ 
+ 
+function beliefmedia_reverse_geocode($address) {
+ 
+	$address = str_replace(" ", "+", "$address");
+	$url = "http://maps.google.com/maps/api/geocode/json?address=$address&sensor=false";
+	$result = file_get_contents("$url");
+	$json = json_decode($result);
+ 
+	foreach ($json->results as $result) {
+		foreach($result->address_components as $addressPart) {
+		  if ((in_array('locality', $addressPart->types)) && (in_array('political', $addressPart->types)))
+		  $city = $addressPart->long_name;
+	    	else if ((in_array('administrative_area_level_1', $addressPart->types)) && (in_array('political', $addressPart->types)))
+		  $state = $addressPart->long_name;
+	    	else if ((in_array('country', $addressPart->types)) && (in_array('political', $addressPart->types)))
+		  $country = $addressPart->long_name;
+		}
+	}
+	
+   if(($city != '') && ($state != '') && ($country != '')) 
+      $address = $city.', '.$state.', '.$country;
+   else if (($city != '') && ($state != ''))
+      $address = $city.', '.$state;
+   else if (($state != '') && ($country != ''))
+      $address = $state.', '.$country;
+   else if ($country != '')
+      $address = $country;
+		
+ return $address;
 }
-
-
-// function to get  the address
-function get_lat_long($address){
-
-    $address = str_replace(" ", "+", $address);
-
-    $json = file_get_contents("http://maps.google.com/maps/api/geocode/json?address=$address&sensor=false&region=$region");
-    $json = json_decode($json);
-
-    $lat = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
-    $long = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
-    return $lat.','.$long;
-}
-</form>
-</html>
-
+ 
+ 
+/* Usage */
+echo beliefmedia_reverse_geocode("19-29 Martin Pl, Sydney");
 ?>
