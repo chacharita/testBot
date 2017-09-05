@@ -1,6 +1,6 @@
 <?php
-$deal_lat=30.469301;
-$deal_long=70.969324;
+$deal_lat=13.60845;
+$deal_long=100.54164;
 $geocode=file_get_contents('http://maps.googleapis.com/maps/api/geocode/json?latlng='.$deal_lat.','.$deal_long.'&sensor=false');
 
         $output= json_decode($geocode);
