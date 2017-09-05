@@ -10,7 +10,7 @@ $add_array = $add_array->address_components;
 //$country = "Not found";
 $state = "Not found"; 
 $city = "Not found";
-$place = "Not found";
+//$place = "Not found";
 //$street = "Not found";
 foreach ($add_array as $key) {
   if($key->types[0] == 'administrative_area_level_2')
@@ -21,10 +21,6 @@ foreach ($add_array as $key) {
   {
     $state = $key->long_name;
   }
-  if($key->types[0] == 'administrative_area_level_3')
-  {
-    $place = $key->long_name;
-  }
 }
-echo "State : ".$state." ,City : ".$city.",Place : ".$place;
+echo "State : ".$state." ,City : ".$city.";
 ?>
