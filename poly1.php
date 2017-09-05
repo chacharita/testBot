@@ -14,8 +14,8 @@
 // echo $lat = $response_a->results[0]->geometry->location->lat;
 // echo "<br />";
 // echo $long = $response_a->results[0]->geometry->location->lng;
-function get_name_locations($all_date=null) {
-  $address = document.getElementById("").value;
+function get_name_locations() {
+  $address = document.getElementById("13.73621,100.65039").value;
   $geocoder = new google.maps.Geocoder();
   $a = geocoder.geocode({address: address}, 
   function(results, status) {
