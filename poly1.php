@@ -19,7 +19,7 @@ $lat = "13.905000";
         {
           $state = $key->long_name;
         }
-        if($key->types[0] == 'location')
+        if($key->types[0] == 'place_id')
         {
           $country = $key->long_name;
         }
