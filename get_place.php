@@ -18,6 +18,6 @@
     echo "City: ".$city;
     echo "<br/>Country: ".$country;
 
-Google GeoCode API
+
 
     ?>
