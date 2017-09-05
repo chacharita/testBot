@@ -4,7 +4,7 @@
 # https://developers.google.com/maps/documentation/utilities/polylinealgorithm
 # in reverse order and inverted (i.e. left shift -> right shift, add -> subtract)
 
-$string = "s|hsA}rwdRsBgA_BcA{Au@JQzAv@|ChBxAp@^JlATb@NVNxACh@IRDHLBLBv@Hb@HRd@`@jGnCtB`A~NpHxLbGfHdDbPfIzAp@lCtAh@TtBv@NPf@`@BJIFq@IoAe@oPcI}LiG";
+$string = "a`gsA_ovdRii@{WcDcBa@]m@SoCmAm@UuCgB";
 # Step 11) unpack the string as unsigned char 'C'
 $byte_array = array_merge(unpack('C*', $string));
 $results = array();
