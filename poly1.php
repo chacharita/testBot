@@ -42,5 +42,8 @@ foreach ($add_array as $key) {
     $street = $key->long_name;
   }
 }
-echo "Country : ".$country." ,State : ".$state." ,City : ".$city,"street".$street;
+echo "Country : ".$country""; 
+echo "State : ".$state."" ;
+echo  "City : ".$city"";
+echo "street".$street"";
 ?>
