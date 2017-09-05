@@ -1,31 +1,16 @@
 <?php
+$deal_lat=30.469301;
+$deal_long=70.969324;
+$geocode=file_get_contents('http://maps.googleapis.com/maps/api/geocode/json?latlng='.$deal_lat.','.$deal_long.'&sensor=false');
 
-$address = "India+Panchkula";
-$url = "http://maps.google.com/maps/api/geocode/json?address=$address&sensor=false&region=India";
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-$response = curl_exec($ch);
-curl_close($ch);
-$response_a = json_decode($response);
-echo $lat = $response_a->results[0]->geometry->location->lat;
-echo "<br />";
-echo $long = $response_a->results[0]->geometry->location->lng;
+        $output= json_decode($geocode);
 
-function get_name_locations($response_a=null) {
-  $address = document.getElementById("$response_a").value;
-  $geocoder = new google.maps.Geocoder();
-  $a = geocoder.geocode({address: address}, 
-  function(results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-     searchLocationsNear(results[0].geometry.location);
-    } else {
-      alert(address + ' not found');
-    }
-  }
-);
-}
+    for($j=0;$j<count($output->results[0]->address_components);$j++){
+               $cn=array($output->results[0]->address_components[$j]->types[0]);
+           if(in_array("country", $cn))
+           {
+            $country= $output->results[0]->address_components[$j]->long_name;
+           }
+            }
+            echo $country;
 ?>
