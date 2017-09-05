@@ -37,13 +37,6 @@ foreach ($add_array as $key) {
   {
     $country = $key->long_name;
   }
-   if($key->types[0] == 'street')
-  {
-    $street = $key->long_name;
-  }
 }
-echo "Country : ".$country""; 
-echo "State : ".$state."" ;
-echo  "City : ".$city"";
-echo "street".$street"";
+echo "Country : ".$country." ,State : ".$state." ,City : ".$city;
 ?>
