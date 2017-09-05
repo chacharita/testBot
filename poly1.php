@@ -21,6 +21,10 @@ foreach ($add_array as $key) {
   {
     $state = $key->long_name;
   }
+  if($key->types[0] == 'country')
+  {
+     $country = $key->long_name;
+  }
 }
 echo "State : ".$state." ,City : ".$city.";
 ?>
