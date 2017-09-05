@@ -21,7 +21,7 @@ foreach ($add_array as $key) {
   {
     $state = $key->long_name;
   }
-  if($key->types[0] == 'administrative_area_level_1')
+  if($key->types[0] == 'administrative_area_level_3')
   {
     $place = $key->long_name;
   }
