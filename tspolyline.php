@@ -1,5 +1,6 @@
 <?php
 
+function vrp_polyline_decode(){
 $string = "qvmrAqzndRcgE_]wlCw_C}pCkfDusBquEvwEuoH";
 $byte_array = array_merge(unpack('C*', $string));
 $results = array();
@@ -28,7 +29,23 @@ for ($i = 2; $i < count($results); $i++) {
   $results[$i] += $results[$i - 2];
 }
 
-var_dump(array_chunk($results, 2));
+  //var_dump(array_chunk($results, 2));
+  searchLocations((array_chunk($results, 2)));
+  
+}
+
+
+function searchLocations($results=null) {
+         $address = document.getElementById("addressInput").value;
+         $geocoder = new google.maps.Geocoder();
+         $a = geocoder.geocode({address: address}, function(results, status) {
+           if (status == google.maps.GeocoderStatus.OK) {
+            searchLocationsNear(results[0].geometry.location);
+           } else {
+             alert(address + ' not found');
+           }
+         });
+       }
 
 
 ?>
