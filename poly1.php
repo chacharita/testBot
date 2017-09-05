@@ -1,7 +1,7 @@
 <?php
 
-$lat = "13.60845";
-      $lng = "100.54164";
+$lat = "13.905000";
+      $lng = "100.519000";
       $data = file_get_contents("http://maps.google.com/maps/api/geocode/json?latlng=$lat,$lng&sensor=false");
       $data = json_decode($data);
       $add_array  = $data->results;
