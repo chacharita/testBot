@@ -13,8 +13,8 @@
 //            }
 //             }
 //             echo $country;
-$lat = "13.60845";
-$lng = "100.54164";
+$lat = "13.770334";
+$lng = "100.080591";
 $data = file_get_contents("http://maps.google.com/maps/api/geocode/json?latlng=$lat,$lng&sensor=false");
 $data = json_decode($data);
 $add_array  = $data->results;
