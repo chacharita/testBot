@@ -55,7 +55,7 @@ $points = Polyline::decode($encoded);
 //   );
 
 // Or list of tuples
-$points = Polyline::pair($points);
+// $points = Polyline::pair($points);
 
 var_dump($points);
 
