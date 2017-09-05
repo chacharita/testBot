@@ -19,7 +19,7 @@ $lat = "13.60845";
         {
           $state = $key->long_name;
         }
-        if($key->types[0] == 'country')
+        if($key->types[0] == 'route')
         {
           $country = $key->long_name;
         }
