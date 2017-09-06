@@ -25,4 +25,5 @@ $lat = "13.905000";
     // }
   }
     echo "City : ".$city;
+    var_dump($city);
 ?>
