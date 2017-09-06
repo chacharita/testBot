@@ -25,4 +25,8 @@ $lat = "13.905000";
         }
       }
       echo "location : ".$street_address." ,State : ".$state." ,City : ".$city;
+
+      var_dump($street_address);
+      var_dump($state);
+      var_dump($city);
 ?>
