@@ -24,5 +24,5 @@ $lat = "13.905000";
     //   $street_address = $key->long_name;
     // }
   }
-    echo "location : ".$street_address." ,State : ".$state." ,City : ".$city;
+    echo "City : ".$city;
 ?>
