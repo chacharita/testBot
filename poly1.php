@@ -7,7 +7,7 @@ $lat = "13.905000";
       $add_array  = $data->results;
       $add_array = $add_array[0];
       $add_array = $add_array->address_components;
-      $country = "Not found";
+      $street_address = "Not found";
       $state = "Not found"; 
       $city = "Not found";
       foreach ($add_array as $key) {
@@ -19,10 +19,10 @@ $lat = "13.905000";
         {
           $state = $key->long_name;
         }
-        if($key->types[0] == 'route')
+        if($key->types[0] == 'street_address')
         {
-          $country = $key->long_name;
+          $street_address = $key->long_name;
         }
       }
-      echo "location : ".$country." ,State : ".$state." ,City : ".$city;
+      echo "location : ".$street_address." ,State : ".$state." ,City : ".$city;
 ?>
