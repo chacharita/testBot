@@ -11,7 +11,7 @@ $lat = "13.905000";
     $state = "Not found"; 
     $city = "Not found";
   foreach ($add_array as $key) {
-    if($key->types[0] == 'accounting')
+    if($key->types[0] == 'sublocality')
     {
       $city = $key->long_name;
     }
