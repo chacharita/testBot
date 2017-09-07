@@ -9,7 +9,7 @@ sleep(5);
  
 $address = str_replace(" ", "+", $address);
  
-$region = 'US';
+$region = 'TH';
  
 $url =    "http://maps.google.com/maps/api/geocode/json?address=$address&sensor=false&region=$region";
  
