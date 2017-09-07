@@ -1,4 +1,8 @@
 <?php
+
+$lat = "13.781550";
+$lon = "100.543700";
+$address = $lat.$lon;
 function get_lat_long($address){
  
 sleep(5);
