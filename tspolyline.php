@@ -1,5 +1,5 @@
 <?php
-$str = "a%60gsA_ovdRii%40%7BWcDcBa%40%5Dm%40SoCmAm%40UuCgB";
+$str = "od}rAwaodR^mCNY~A?@cAHi@iBQ_@Gd@qBYIeDk@PyA@OE}@KCCC{QoFi@G[n@YMd@{@\eAmByAu@}@qAwCi@_BKy@KiAI]KYOQg@[k@UgDgAWYsBk@qFgBog@kO}KqDaAW_EmAs@UmGiCyCaAkXaI}E_BwHyB{m@cRmTqGmEmAmAGoB[iDc@kAKwBIeABa@Hi@Tq@d@o@V]?WKs@i@][i@u@O_@WaAK{AHyBdAaTa@y`@IwEKm@ISKO[SsS{J}LiG";
 $str_urldecode = urldecode($str);
 var_dump($str_urldecode);
 $string = $str_urldecode;
