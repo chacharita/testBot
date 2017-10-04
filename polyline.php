@@ -1,6 +1,6 @@
 <?php
 
-$string = "qvbsAuntdRrDoEwe@{LgAhKi@bE_AfFq@jGSnA{@dCk@fAm@|@KR";
+$string = "spo~Fd{`vOrfAibEvkAvfFw{@rsF";
 $byte_array = array_merge(unpack('C*', $string));
 $results = array();
 
